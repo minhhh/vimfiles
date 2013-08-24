@@ -12,6 +12,9 @@ Bundle 'gmarik/vundle'
 Bundle 'Lokaltog/vim-powerline'
 Bundle 'jiangmiao/auto-pairs'
 Bundle 'scrooloose/nerdtree'
+Bundle 'terryma/vim-multiple-cursors'
+Bundle 'xolox/vim-session'
+Bundle 'xolox/vim-misc'
 
 " Various editing plugins
 " Bundle 'kana/vim-textobj-user'
@@ -395,6 +398,14 @@ autocmd InsertLeave * match ExtraWhitespace /\s\+$/
 autocmd BufWinLeave * call clearmatches()
 
 let NERDTreeShowHidden=1
+
+
+" ----------------------------------------------------------------------------
+" Session stuff
+" ----------------------------------------------------------------------------
+:let g:session_autosave=1
+:let g:session_autoload=1
+:let g:session_verbose_messages=0
 
 " ----------------------------------------------------------------------------
 " Allow overriding these settings
