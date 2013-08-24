@@ -1,15 +1,17 @@
 " ----------------------------------------------------------------------------
 "  Vundle setup
 " ----------------------------------------------------------------------------
-filetype off 			" Required for Vundle
+filetype off      " Required for Vundle
 
-set rtp+=~/.vim/bundle/vundle/	" Add vundle to the RuntimePath
+set rtp+=~/.vim/bundle/vundle/  " Add vundle to the RuntimePath
 call vundle#rc()
 
 " Let Vundle manage Vundle. Required!
 Bundle 'gmarik/vundle'
 
 Bundle 'Lokaltog/vim-powerline'
+Bundle 'jiangmiao/auto-pairs'
+Bundle 'scrooloose/nerdtree'
 
 " Various editing plugins
 " Bundle 'kana/vim-textobj-user'
@@ -82,12 +84,12 @@ Bundle 'tpope/vim-markdown'
 
 
 if has('autocmd')
-  filetype plugin indent on	  " Turn on Filetype detection, plugins, and
+  filetype plugin indent on   " Turn on Filetype detection, plugins, and
                               " indent
 endif
 
 if has('syntax') && !exists('g:syntax_on')
-  syntax enable			" Turn on syntax highlighting
+  syntax enable     " Turn on syntax highlighting
 endif
 
 " Load matchit.vim, but only if the user hasn't installed a newer version.
@@ -102,11 +104,8 @@ runtime! ftplugin/man.vim
 "  moving around, searching and patterns
 " ----------------------------------------------------------------------------
 set nostartofline     " keep cursor in same column for long-range motion cmds
-set incsearch			    " Highlight pattern matches as you type
-set ignorecase			  " ignore case when using a search pattern
-set smartcase			    " override 'ignorecase' when pattern
-                      " has upper case character
-set noundofile
+set undodir=/tmp
+
 " ----------------------------------------------------------------------------
 "  tags
 " ----------------------------------------------------------------------------
@@ -117,17 +116,17 @@ set noundofile
 set scrolloff=3       " number of screen lines to show around
 " the cursor
 
-set linebreak			    " For lines longer than the window,
+set linebreak         " For lines longer than the window,
                       " wrap intelligently. This doesn't
                       " insert hard line breaks.
 
-set showbreak=↪\ \ 		" string to put before wrapped screen
+set showbreak=↪\ \    " string to put before wrapped screen
 " lines
 
-set sidescrolloff=2		" min # of columns to keep left/right of cursor
+set sidescrolloff=2   " min # of columns to keep left/right of cursor
 set display+=lastline " show last line, even if it doesn't fit in the window
 
-set cmdheight=2 		  " # of lines for the command window
+set cmdheight=2       " # of lines for the command window
                       " cmdheight=2 helps avoid 'Press ENTER...' prompts
 
 " Define characters to show when you show formatting
@@ -139,7 +138,7 @@ if &listchars ==# 'eol:$'
   endif
 endif
 
-set number			      " show line numbers
+set number            " show line numbers
 
 " ----------------------------------------------------------------------------
 "  syntax, highlighting and spelling
@@ -154,10 +153,10 @@ endif
 " ----------------------------------------------------------------------------
 "  multiple windows
 " ----------------------------------------------------------------------------
-set laststatus=2  	  " Show a status line, even if there's only one
+set laststatus=2      " Show a status line, even if there's only one
                       " Vim window
 
-set hidden		    	  " allow switching away from current buffer w/o
+set hidden            " allow switching away from current buffer w/o
                       " writing
 
 set switchbuf=usetab  " Jump to the 1st open window which contains
@@ -181,7 +180,7 @@ set statusline+=\ <\ %{&fenc}
 set statusline+=\ <\ %{&ff}
 set statusline+=\ <\ %p%%
 set statusline+=\ %l:
-set statusline+=%02.3c   	" cursor line/total lines
+set statusline+=%02.3c    " cursor line/total lines
 
 set helpheight=30         " Set window height when opening Vim help windows
 
@@ -192,14 +191,14 @@ set helpheight=30         " Set window height when opening Vim help windows
 " ----------------------------------------------------------------------------
 "  terminal
 " ----------------------------------------------------------------------------
-set ttyfast			      " this is the 21st century, people
+set ttyfast           " this is the 21st century, people
 
 " ----------------------------------------------------------------------------
 "  using the mouse
 " ----------------------------------------------------------------------------
 
 " ----------------------------------------------------------------------------
-"  GUI				      " Set these options in .gvimrc
+"  GUI              " Set these options in .gvimrc
 " See help for 'setting-guifont' for tips on how to set guifont on Mac vs Windows
 " ----------------------------------------------------------------------------
 
@@ -211,14 +210,14 @@ set ttyfast			      " this is the 21st century, people
 "  messages and info
 " ----------------------------------------------------------------------------
 
-set showcmd			    " In the status bar, show incomplete commands
+set showcmd         " In the status bar, show incomplete commands
                     " as they are typed
 
 set noshowmode      " don't display the current mode (Insert, Visual, Replace)
-                    " in the status line. This info is already shown in the 
+                    " in the status line. This info is already shown in the
                     " Powerline status bar.
 
-set ruler			      " Always display the current cursor position in
+set ruler           " Always display the current cursor position in
                     " the Status Bar
 
 set confirm         " Ask to save buffer instead of failing when executing
@@ -230,26 +229,26 @@ set confirm         " Ask to save buffer instead of failing when executing
 
 " See http://stackoverflow.com/questions/11404800/fix-vim-tmux-yank-paste-on-unnamed-register
 if $TMUX == ""
-  set clipboard=unnamed	" Yank to the system clipboard by default
+  set clipboard=unnamed " Yank to the system clipboard by default
 endif
 
 " ----------------------------------------------------------------------------
-"  editing text			" TODO: look at these options
+"  editing text     " TODO: look at these options
 " ----------------------------------------------------------------------------
 set backspace=indent,eol,start  "backspace over everything
 
 if v:version > 703 || v:version == 703 && has("patch541")
-  set formatoptions+=j 	  " delete comment char on second line when
+  set formatoptions+=j    " delete comment char on second line when
                           " joining two commented lines
 endif
 
-set showmatch  			      " when inserting a bracket, briefly jump to its
+set showmatch             " when inserting a bracket, briefly jump to its
                           " match
 
-set nojoinspaces	  	    " Use only one space after '.' when joining
+set nojoinspaces          " Use only one space after '.' when joining
                           " lines, instead of two
 
-set completeopt+=longest 	" better omni-complete menu
+set completeopt+=longest  " better omni-complete menu
 
 set nrformats-=octal      " don't treat numbers with leading zeros as octal
                           " when incrementing/decrementing
@@ -257,21 +256,22 @@ set nrformats-=octal      " don't treat numbers with leading zeros as octal
 " ----------------------------------------------------------------------------
 "  tabs and indenting
 " ----------------------------------------------------------------------------
-set tabstop=2             " tab = 2 spaces
-set shiftwidth=2          " autoindent indents 2 spaces
+set tabstop=4             " tab = 2 spaces
+set shiftwidth=4          " autoindent indents 2 spaces
 set smarttab              " <TAB> in front of line inserts 'shiftwidth' blanks
-set softtabstop=2
-set shiftround            " round to 'shiftwidth' for "<<" and ">>" 
+set softtabstop=4
+set shiftround            " round to 'shiftwidth' for "<<" and ">>"
 set expandtab
 set smartcase
 set hlsearch
-set incsearch
+set incsearch         " Highlight pattern matches as you type
+set ignorecase        " ignore case when using a search pattern
 
 " ----------------------------------------------------------------------------
 "  folding
 " ----------------------------------------------------------------------------
 if has('folding')
-  set nofoldenable 		    " When opening files, all folds open by default
+  set nofoldenable        " When opening files, all folds open by default
 endif
 
 set foldtext=NeatFoldText()
@@ -288,12 +288,18 @@ set diffopt+=vertical       " diff mode with vertical splits please
 :nmap <F2> :w<CR>
 :imap <F2> <Esc>:w<CR>a
 :map - $
+:nmap <C-m> :q<CR>
 vnoremap <C-r> "hy:%s/<C-r>h//gc<left><left><left>
+:nmap <C-a><C-n> :tabnew<CR>
+:nmap <C-j> :tabp<CR>
+:nmap <C-k> :tabn<CR>
+:nmap <C-a><C-l> :%s/\s\+$//<CR>
+:nmap <C-a><C-b> :retab<CR>
 
 " ----------------------------------------------------------------------------
 "  reading and writing files
 " ----------------------------------------------------------------------------
-set autoread			          " Automatically re-read files changed outside
+set autoread                " Automatically re-read files changed outside
                             " of Vim
 
 " ----------------------------------------------------------------------------
@@ -303,6 +309,7 @@ set autoread			          " Automatically re-read files changed outside
 " Set swap file, backup and undo directories to sensible locations
 " Taken from https://github.com/tpope/vim-sensible
 " The trailing double '//' on the filenames cause Vim to create undo, backup,
+" and swap filenames using the full path to the file, substituting '%' for
 " and swap filenames using the full path to the file, substituting '%' for
 " '/', e.g. '%Users%bob%foo.txt'
 let s:dir = has('win32') ? '$APPDATA/Vim' : match(system('uname'), "Darwin") > -1 ? '~/Library/Vim' : empty($XDG_DATA_HOME) ? '~/.local/share/vim' : '$XDG_DATA_HOME/vim'
@@ -324,7 +331,7 @@ endif
 " ----------------------------------------------------------------------------
 "  command line editing
 " ----------------------------------------------------------------------------
-set history=200 		" Save more commands in history
+set history=200     " Save more commands in history
                     " See Practical Vim, by Drew Neil, pg 68
 
 set wildmode=list:longest,full
@@ -351,7 +358,7 @@ if has("win32") || has("gui_win32")
     set shellquote=\"
     " TODO: shellxquote must be a literal space character.
     " Fix my trim trailing whitespace command to not run automatically on save
-    set shellxquote= 
+    set shellxquote=
   endif
 endif
 
@@ -380,6 +387,14 @@ set encoding=utf-8
 " Add all cookbooks/*/recipe dirs to Vim's path variable
 autocmd BufRead,BufNewFile */cookbooks/*/recipes/*.rb setlocal path+=recipes;/cookbooks/**1
 
+highlight ExtraWhitespace ctermbg=red guibg=red
+match ExtraWhitespace /\s\+$/
+autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
+autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
+autocmd InsertLeave * match ExtraWhitespace /\s\+$/
+autocmd BufWinLeave * call clearmatches()
+
+let NERDTreeShowHidden=1
 
 " ----------------------------------------------------------------------------
 " Allow overriding these settings
