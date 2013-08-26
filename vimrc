@@ -407,8 +407,9 @@ let NERDTreeShowHidden=1
 " ----------------------------------------------------------------------------
 " Session stuff
 " ----------------------------------------------------------------------------
-:let g:session_autosave=1
-:let g:session_autoload=1
+:let g:session_autosave=0
+:let g:session_autoload='yes'
+:let g:session_default_to_last='yes'
 :let g:session_verbose_messages=0
 
 " ----------------------------------------------------------------------------
