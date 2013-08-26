@@ -286,7 +286,7 @@ set diffopt+=vertical       " start diff mode with vertical splits by default
 set diffopt+=vertical       " diff mode with vertical splits please
 
 " ----------------------------------------------------------------------------
-"  mapping
+" Some useful key mappings.
 " ----------------------------------------------------------------------------
 :nmap <F2> :w<CR>
 :imap <F2> <Esc>:w<CR>a
@@ -390,6 +390,9 @@ set encoding=utf-8
 " Add all cookbooks/*/recipe dirs to Vim's path variable
 autocmd BufRead,BufNewFile */cookbooks/*/recipes/*.rb setlocal path+=recipes;/cookbooks/**1
 
+" ----------------------------------------------------------------------------
+" Whitespace stuff
+" ----------------------------------------------------------------------------
 highlight ExtraWhitespace ctermbg=red guibg=red
 match ExtraWhitespace /\s\+$/
 autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
@@ -398,7 +401,6 @@ autocmd InsertLeave * match ExtraWhitespace /\s\+$/
 autocmd BufWinLeave * call clearmatches()
 
 let NERDTreeShowHidden=1
-
 
 " ----------------------------------------------------------------------------
 " Session stuff
