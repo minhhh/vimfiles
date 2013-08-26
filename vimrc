@@ -107,8 +107,10 @@ runtime! ftplugin/man.vim
 "  moving around, searching and patterns
 " ----------------------------------------------------------------------------
 set nostartofline     " keep cursor in same column for long-range motion cmds
-set undodir=/tmp
 
+if exists("+undofile")
+  set undodir=/tmp
+endif
 " ----------------------------------------------------------------------------
 "  tags
 " ----------------------------------------------------------------------------
