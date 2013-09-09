@@ -11,10 +11,12 @@ Bundle 'gmarik/vundle'
 
 Bundle 'Lokaltog/vim-powerline'
 Bundle 'jiangmiao/auto-pairs'
-Bundle 'scrooloose/nerdtree'
+" Bundle 'scrooloose/nerdtree'
 Bundle 'terryma/vim-multiple-cursors'
 Bundle 'xolox/vim-session'
 Bundle 'xolox/vim-misc'
+Bundle 'maxbrunsfeld/vim-yankstack'
+Bundle 'derekwyatt/vim-scala'
 
 " Various editing plugins
 " Bundle 'kana/vim-textobj-user'
@@ -201,7 +203,7 @@ set ttyfast           " this is the 21st century, people
 " ----------------------------------------------------------------------------
 "  using the mouse
 " ----------------------------------------------------------------------------
-
+set mouse=v
 " ----------------------------------------------------------------------------
 "  GUI              " Set these options in .gvimrc
 " See help for 'setting-guifont' for tips on how to set guifont on Mac vs Windows
@@ -293,7 +295,8 @@ set diffopt+=vertical       " diff mode with vertical splits please
 :nmap <F2> :w<CR>
 :imap <F2> <Esc>:w<CR>a
 :map - $
-:nmap <C-m> :q<CR>
+:nmap <F4> :q<CR>
+:imap <F4> <Esc>:q<CR>a
 vnoremap <C-r> "hy:%s/<C-r>h//gc<left><left><left>
 :nmap <C-a><C-n> :tabnew<CR>
 :nmap <C-j> :tabp<CR>
@@ -402,7 +405,7 @@ autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
 autocmd InsertLeave * match ExtraWhitespace /\s\+$/
 autocmd BufWinLeave * call clearmatches()
 
-let NERDTreeShowHidden=1
+" let NERDTreeShowHidden=1
 
 " ----------------------------------------------------------------------------
 " Session stuff
