@@ -1,7 +1,6 @@
 " ----------------------------------------------------------------------------
 " Key mappings
 " ----------------------------------------------------------------------------
-
 if has("win32") || has("gui_win32")
 
   " Key mappings for Windows
@@ -10,7 +9,8 @@ if has("win32") || has("gui_win32")
 endif
 
 " exit to Normal mode with 'kj'
-" inoremap kj <ESC>
+inoremap kj <ESC>
+inoremap jk <ESC>
 
 " Make 'Y' yank from cursor pos to EOL. This
 " makes 'Y' consistent with 'D' which deletes
