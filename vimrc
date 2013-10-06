@@ -299,8 +299,8 @@ set diffopt+=vertical       " diff mode with vertical splits please
 :imap <F4> <Esc>:q<CR>a
 vnoremap <C-r> "hy:%s/<C-r>h//gc<left><left><left>
 :nmap <C-a><C-n> :tabnew<CR>
-:nmap <C-j> :tabp<CR>
-:nmap <C-k> :tabn<CR>
+:nmap <C-a><C-j> :tabp<CR>
+:nmap <C-a><C-k> :tabn<CR>
 :nmap <C-a><C-l> :%s/\s\+$//<CR>
 :nmap <C-a><C-b> :retab<CR>
 
