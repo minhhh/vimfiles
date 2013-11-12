@@ -303,6 +303,8 @@ vnoremap <C-r> "hy:%s/<C-r>h//gc<left><left><left>
 :nmap <C-a><C-k> :tabn<CR>
 :nmap <C-a><C-l> :%s/\s\+$//<CR>
 :nmap <C-a><C-b> :retab<CR>
+nmap <CR> i<CR><Esc>
+nnoremap <C-J> a<CR><Esc>k$
 
 " ----------------------------------------------------------------------------
 "  reading and writing files
