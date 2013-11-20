@@ -11,7 +11,7 @@ Bundle 'gmarik/vundle'
 
 Bundle 'Lokaltog/vim-powerline'
 Bundle 'jiangmiao/auto-pairs'
-" Bundle 'scrooloose/nerdtree'
+Bundle 'scrooloose/nerdtree'
 Bundle 'terryma/vim-multiple-cursors'
 Bundle 'xolox/vim-session'
 Bundle 'xolox/vim-misc'
@@ -59,6 +59,8 @@ endif
 " Colorschemes
 " Bundle 'altercation/vim-colors-solarized'
 " Bundle 'endel/vim-github-colorscheme'
+Bundle 'jelera/vim-javascript-syntax'
+
 
 " Ruby plugins
 " Bundle 'vim-ruby/vim-ruby'
@@ -150,7 +152,7 @@ set number            " show line numbers
 " ----------------------------------------------------------------------------
 "  syntax, highlighting and spelling
 " ----------------------------------------------------------------------------
-colorscheme SolarizedDark_modified
+" colorscheme SolarizedDark_modified
 
 if exists('+colorcolumn')
   set colorcolumn=80    " display a line in column 80 to show you
@@ -303,7 +305,6 @@ vnoremap <C-r> "hy:%s/<C-r>h//gc<left><left><left>
 :nmap <C-a><C-k> :tabn<CR>
 :nmap <C-a><C-l> :%s/\s\+$//<CR>
 :nmap <C-a><C-b> :retab<CR>
-nmap <CR> i<CR><Esc>
 nnoremap <C-J> a<CR><Esc>k$
 
 " ----------------------------------------------------------------------------
