@@ -1,4 +1,4 @@
-" ----------------------------------------------------------------------------
+"  ----------------------------------------------------------------------------
 "  Vundle setup
 " ----------------------------------------------------------------------------
 filetype off      " Required for Vundle
@@ -17,6 +17,7 @@ Bundle 'xolox/vim-session'
 Bundle 'xolox/vim-misc'
 Bundle 'maxbrunsfeld/vim-yankstack'
 Bundle 'derekwyatt/vim-scala'
+Bundle 'techlivezheng/vim-plugin-minibufexpl'
 
 " Various editing plugins
 " Bundle 'kana/vim-textobj-user'
@@ -295,16 +296,28 @@ set diffopt+=vertical       " diff mode with vertical splits please
 " Some useful key mappings.
 " ----------------------------------------------------------------------------
 nnoremap ; :
-nnoremap , "a
+nnoremap , "0
 :nmap <F2> :w<CR>
 :imap <F2> <Esc>:w<CR>a
 :map - $
 :nmap <F4> :q<CR>
 :imap <F4> <Esc>:q<CR>a
 vnoremap <C-r> "hy:%s/<C-r>h//gc<left><left><left>
-:nmap <C-a><C-n> :tabnew<CR>
-:nmap <C-a><C-j> :tabp<CR>
-:nmap <C-a><C-k> :tabn<CR>
+
+" Map tab navigation
+" :nmap <C-a><C-n> :tabnew<CR>
+" :nmap <C-a><C-j> :tabp<CR>
+" :nmap <C-a><C-k> :tabn<CR>
+
+" Map buffer navigation
+:let mapleader = "-"
+:nmap <leader>n :enew<CR>
+:nmap <leader>j :MBEToggle<CR>:MBEToggle<CR>:MBEbp<CR>
+:nmap <leader>k :MBEToggle<CR>:MBEToggle<CR>::MBEbn<CR>
+:nmap <leader>o :MBEToggle<CR>
+:nmap <leader>w :MBEbd<CR>
+
+
 :nmap <C-a><C-l> :%s/\s\+$//<CR>
 :nmap <C-a><C-b> :retab<CR>
 nnoremap <C-J> a<CR><Esc>k$
