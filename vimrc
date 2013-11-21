@@ -18,6 +18,8 @@ Bundle 'xolox/vim-misc'
 Bundle 'maxbrunsfeld/vim-yankstack'
 Bundle 'derekwyatt/vim-scala'
 Bundle 'techlivezheng/vim-plugin-minibufexpl'
+Bundle 'vim-scripts/AutoComplPop'
+
 
 " Various editing plugins
 " Bundle 'kana/vim-textobj-user'
@@ -58,9 +60,7 @@ endif
 "Bundle 'bufkill.vim'
 
 " Colorschemes
-" Bundle 'altercation/vim-colors-solarized'
-" Bundle 'endel/vim-github-colorscheme'
-Bundle 'jelera/vim-javascript-syntax'
+" Bundle 'jelera/vim-javascript-syntax'
 
 
 " Ruby plugins
@@ -82,7 +82,7 @@ Bundle 'tpope/vim-markdown'
 " Bundle 'vimwiki'
 
 " Syntax check on buffer save
-"Bundle 'scrooloose/syntastic'
+Bundle 'scrooloose/syntastic'
 
 " Source Control plugins
 "Bundle 'tpope/vim-git'
@@ -153,7 +153,7 @@ set number            " show line numbers
 " ----------------------------------------------------------------------------
 "  syntax, highlighting and spelling
 " ----------------------------------------------------------------------------
-" colorscheme SolarizedDark_modified
+colorscheme Tomorrow
 
 if exists('+colorcolumn')
   set colorcolumn=80    " display a line in column 80 to show you
@@ -317,6 +317,10 @@ vnoremap <C-r> "hy:%s/<C-r>h//gc<left><left><left>
 :nmap <leader>o :MBEToggle<CR>
 :nmap <leader>w :MBEbd<CR>
 :nmap <leader>q :MBEbd!<CR>
+
+" Map syntastic
+:nmap <leader>b :SyntasticCheck<CR>:Errors<CR>
+:nmap <leader>c :cclose<CR>:lclose<CR>
 
 
 :nmap <C-a><C-l> :%s/\s\+$//<CR>
