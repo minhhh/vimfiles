@@ -316,6 +316,7 @@ vnoremap <C-r> "hy:%s/<C-r>h//gc<left><left><left>
 :nmap <leader>k :MBEToggle<CR>:MBEToggle<CR>::MBEbn<CR>
 :nmap <leader>o :MBEToggle<CR>
 :nmap <leader>w :MBEbd<CR>
+:nmap <leader>q :MBEbd!<CR>
 
 
 :nmap <C-a><C-l> :%s/\s\+$//<CR>
