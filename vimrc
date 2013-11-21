@@ -15,10 +15,10 @@ Bundle 'scrooloose/nerdtree'
 Bundle 'terryma/vim-multiple-cursors'
 Bundle 'xolox/vim-session'
 Bundle 'xolox/vim-misc'
-Bundle 'maxbrunsfeld/vim-yankstack'
+" Bundle 'maxbrunsfeld/vim-yankstack'
 Bundle 'derekwyatt/vim-scala'
 Bundle 'techlivezheng/vim-plugin-minibufexpl'
-Bundle 'vim-scripts/AutoComplPop'
+"Bundle 'vim-scripts/AutoComplPop'
 
 
 " Various editing plugins
@@ -47,7 +47,7 @@ if executable('ag')
   Bundle 'rking/ag.vim'
 endif
 
-Bundle 'mhinz/vim-startify'
+" Bundle 'mhinz/vim-startify'
 Bundle 'chrisbra/Recover.vim'
 
 " Tmux plugins
@@ -312,17 +312,24 @@ vnoremap <C-r> "hy:%s/<C-r>h//gc<left><left><left>
 " Map buffer navigation
 :let mapleader = "-"
 :nmap <leader>n :enew<CR>
-:nmap <leader>j :MBEToggle<CR>:MBEToggle<CR>:MBEbp<CR>
-:nmap <leader>k :MBEToggle<CR>:MBEToggle<CR>::MBEbn<CR>
+:nmap <leader>j :MBEbp<CR>
+:nmap <leader>k :MBEbn<CR>
 :nmap <leader>o :MBEToggle<CR>
 :nmap <leader>w :MBEbd<CR>
 :nmap <leader>q :MBEbd!<CR>
 
 " Map syntastic
 :nmap <leader>b :SyntasticCheck<CR>:Errors<CR>
-:nmap <leader>c :cclose<CR>:lclose<CR>
+:nmap <leader>c :silent! close<CR>:lclose<CR>
+
+" Map session
+:nmap <leader>s :silent! NERDTreeClose<CR>:SaveSession<CR>
+:nmap <leader>l :silent! NERDTreeClose<CR>:wincmd j<CR>:silent! OpenSession<CR>:wincmd l<CR>:wincmd j<CR>:wincmd c<CR>:wincmd j<CR>:wincmd c<CR>:silent! MBEbd<CR>:silent! NERDTree<CR>:wincmd l<CR> " Fix the issue with MBE, reopen NerdTree too
+:nmap <leader>r :silent! MRU<CR>
 
 
+
+" Other function that changes file
 :nmap <C-a><C-l> :%s/\s\+$//<CR>
 :nmap <C-a><C-b> :retab<CR>
 nnoremap <C-J> a<CR><Esc>k$
@@ -385,7 +392,7 @@ if has("win32") || has("gui_win32")
     " Set PowerShell as the shell for running external ! commands
     " http://stackoverflow.com/questions/7605917/system-with-powershell-in-vim
     set shell=PowerShell
-    set shellcmdflag=-ExecutionPolicy\ RemoteSigned\ -Command
+    set shellcmdflag=-ExecutionPolicy\ RemoteSidned\ -Command
     set shellquote=\"
     " TODO: shellxquote must be a literal space character.
     " Fix my trim trailing whitespace command to not run automatically on save
@@ -428,13 +435,19 @@ autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
 autocmd InsertLeave * match ExtraWhitespace /\s\+$/
 autocmd BufWinLeave * call clearmatches()
 
-" let NERDTreeShowHidden=1
+
+" NerdTree settings
+:let NERDTreeShowHidden=1
+:let NERDTreeShowBookmarks=1
+:let g:NERDTreeChDirMode=2
+autocmd vimenter * :silent! NERDTree
 
 " ----------------------------------------------------------------------------
 " Session stuff
+" Update: unfortunately this doesn't work well with MiniBufExplorer
 " ----------------------------------------------------------------------------
 :let g:session_autosave=0
-:let g:session_autoload='yes'
+:let g:session_autoload='no'
 :let g:session_default_to_last='yes'
 :let g:session_verbose_messages=0
 
