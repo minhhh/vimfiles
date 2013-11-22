@@ -90,7 +90,6 @@ Bundle 'scrooloose/syntastic'
 "Bundle 'gregsexton/gitv'
 "Bundle 'mhinz/vim-signify'
 
-
 if has('autocmd')
   filetype plugin indent on   " Turn on Filetype detection, plugins, and
                               " indent
@@ -320,14 +319,17 @@ vnoremap <C-r> "hy:%s/<C-r>h//gc<left><left><left>
 
 " Map syntastic
 :nmap <leader>b :SyntasticCheck<CR>:Errors<CR>
-:nmap <leader>c :silent! close<CR>:lclose<CR>
+:nmap <leader>c :silent! cclose<CR>:lclose<CR>
 
 " Map session
-:nmap <leader>s :silent! NERDTreeClose<CR>:SaveSession<CR>
-:nmap <leader>l :silent! NERDTreeClose<CR>:wincmd j<CR>:silent! OpenSession<CR>:wincmd l<CR>:wincmd j<CR>:wincmd c<CR>:wincmd j<CR>:wincmd c<CR>:silent! MBEbd<CR>:silent! NERDTree<CR>:wincmd l<CR> " Fix the issue with MBE, reopen NerdTree too
-:nmap <leader>r :silent! MRU<CR>
+:nmap <leader>ss :silent! NERDTreeClose<CR>:silent! MBEClose<CR>:SaveSession<CR>:silent! NERDTree<CR>:silent! MBEOpen<CR>:silent! wincmd l<CR>
 
+:nmap <leader>sl :silent! NERDTreeClose<CR>:silent! MBEClose<CR>:silent! OpenSession<CR>:silent! NERDTree<CR>:silent! MBEOpen<CR>:wincmd l<CR> " Fix the issue with MBE, reopen NerdTree too
+:nmap <leader>sr :silent! MRU<CR>
 
+:nmap <leader>r :silent! edit<CR>
+
+noremap <C-f> :Ack -Q --smart-case 
 
 " Other function that changes file
 :nmap <C-a><C-l> :%s/\s\+$//<CR>
