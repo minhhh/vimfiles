@@ -21,9 +21,9 @@ Bundle 'techlivezheng/vim-plugin-minibufexpl'
 Bundle 'SirVer/ultisnips'
 Bundle 'junegunn/vim-easy-align'
 Bundle 'tpope/vim-surround'
+Bundle 'jiangmiao/auto-pairs'
 
 " Various editing plugins
-" Bundle 'jiangmiao/auto-pairs'
 " Bundle 'kana/vim-textobj-user'
 " Bundle 'tpope/vim-repeat'
 " Bundle 'tpope/vim-unimpaired'
