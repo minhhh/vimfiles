@@ -117,6 +117,8 @@ set nostartofline     " keep cursor in same column for long-range motion cmds
 if exists("+undofile")
   set undodir=/tmp
 endif
+set dir=~/.vimswap//,/var/tmp//,/tmp//
+
 " ----------------------------------------------------------------------------
 "  tags
 " ----------------------------------------------------------------------------
