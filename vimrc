@@ -10,21 +10,22 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 
 Bundle 'Lokaltog/vim-powerline'
-Bundle 'jiangmiao/auto-pairs'
 Bundle 'scrooloose/nerdtree'
 Bundle 'terryma/vim-multiple-cursors'
 Bundle 'xolox/vim-session'
 Bundle 'xolox/vim-misc'
-" Bundle 'maxbrunsfeld/vim-yankstack'
 Bundle 'derekwyatt/vim-scala'
 Bundle 'techlivezheng/vim-plugin-minibufexpl'
-"Bundle 'vim-scripts/AutoComplPop'
-
+"Bundle 'vim-scripts/AutoComplPop' # comment since this seems to slow vim down
+"for me
+Bundle 'SirVer/ultisnips'
+Bundle 'junegunn/vim-easy-align'
+Bundle 'tpope/vim-surround'
 
 " Various editing plugins
+" Bundle 'jiangmiao/auto-pairs'
 " Bundle 'kana/vim-textobj-user'
 " Bundle 'tpope/vim-repeat'
-" Bundle 'tpope/vim-surround'
 " Bundle 'tpope/vim-unimpaired'
 " Bundle 'nelstrom/vim-visual-star-search'
 " Bundle 'ZoomWin'
@@ -32,6 +33,7 @@ Bundle 'techlivezheng/vim-plugin-minibufexpl'
 " Bundle 'tpope/vim-endwise'
 " Bundle 'godlygeek/tabular'
 " Bundle 'HarnoRanaivo/vim-neatfoldtext'
+" Bundle 'maxbrunsfeld/vim-yankstack'
 
 " Comment plugin
 Bundle 'tpope/vim-commentary'
@@ -159,6 +161,7 @@ if exists('+colorcolumn')
                         " where to line break.
 endif
 
+set nospell
 " ----------------------------------------------------------------------------
 "  multiple windows
 " ----------------------------------------------------------------------------
@@ -330,6 +333,9 @@ vnoremap <C-r> "hy:%s/<C-r>h//gc<left><left><left>
 :nmap <leader>r :silent! edit<CR>
 
 noremap <C-f> :Ack -Q --smart-case 
+
+" Easyalign
+vnoremap <silent> <leader>a :EasyAlign<Enter>
 
 " Other function that changes file
 :nmap <C-a><C-l> :%s/\s\+$//<CR>
