@@ -22,6 +22,7 @@ Bundle 'SirVer/ultisnips'
 Bundle 'junegunn/vim-easy-align'
 Bundle 'tpope/vim-surround'
 Bundle 'jiangmiao/auto-pairs'
+" Bundle 'Townk/vim-autoclose'
 
 " Various editing plugins
 " Bundle 'kana/vim-textobj-user'
@@ -129,7 +130,7 @@ set dir=~/.vimswap//,/var/tmp//,/tmp//
 set scrolloff=3       " number of screen lines to show around
 " the cursor
 
-set linebreak         " For lines longer than the window,
+" set linebreak         " For lines longer than the window,
                       " wrap intelligently. This doesn't
                       " insert hard line breaks.
 
@@ -163,7 +164,6 @@ if exists('+colorcolumn')
                         " where to line break.
 endif
 
-set nospell
 " ----------------------------------------------------------------------------
 "  multiple windows
 " ----------------------------------------------------------------------------
@@ -274,6 +274,7 @@ set tabstop=4             " tab = 2 spaces
 set shiftwidth=4          " autoindent indents 2 spaces
 set smarttab              " <TAB> in front of line inserts 'shiftwidth' blanks
 set softtabstop=4
+set nosmartindent
 set shiftround            " round to 'shiftwidth' for "<<" and ">>"
 set expandtab
 set smartcase
@@ -307,6 +308,7 @@ nnoremap , "0
 :nmap <F4> :q<CR>
 :imap <F4> <Esc>:q<CR>a
 vnoremap <C-r> "hy:%s/<C-r>h//gc<left><left><left>
+noremap <C-f> :Ack -Q --smart-case
 
 " Map tab navigation
 " :nmap <C-a><C-n> :tabnew<CR>
@@ -328,21 +330,19 @@ vnoremap <C-r> "hy:%s/<C-r>h//gc<left><left><left>
 
 " Map session
 :nmap <leader>ss :silent! NERDTreeClose<CR>:silent! MBEClose<CR>:SaveSession<CR>:silent! NERDTree<CR>:silent! MBEOpen<CR>:silent! wincmd l<CR>
-
 :nmap <leader>sl :silent! NERDTreeClose<CR>:silent! MBEClose<CR>:silent! OpenSession<CR>:silent! NERDTree<CR>:silent! MBEOpen<CR>:wincmd l<CR> " Fix the issue with MBE, reopen NerdTree too
 :nmap <leader>sr :silent! MRU<CR>
 
 :nmap <leader>r :silent! edit<CR>
 
-noremap <C-f> :Ack -Q --smart-case 
-
 " Easyalign
 vnoremap <silent> <leader>a :EasyAlign<Enter>
 
 " Other function that changes file
-:nmap <C-a><C-l> :%s/\s\+$//<CR>
-:nmap <C-a><C-b> :retab<CR>
+:nmap <leader>al :%s/\s\+$//<CR>
+:nmap <leader>ab :retab<CR>
 nnoremap <C-J> a<CR><Esc>k$
+:nmap <leader>cc :set wrap linebreak textwidth=0<CR>:set nospell<CR>
 
 " ----------------------------------------------------------------------------
 "  reading and writing files

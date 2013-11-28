@@ -1,7 +1,7 @@
 Vimfiles
 ========
 
-Vim files for OSX and Windows
+Vim files for OSX, Windows and Linux
 
 
 ## First time install for Mac OS X
@@ -16,7 +16,7 @@ Vim files for OSX and Windows
     $ ln -s ~/.vim/gvimrc ~/.gvimrc
 
 
-3. Make the .vim/bundle directory:
+3. Make the `.vim/bundle` directory:
 
     $ mkdir ~/.vim/bundle
 
@@ -28,4 +28,4 @@ Vim files for OSX and Windows
 
 5. Install configured bundles:
 
-Launch `mvim`, run `:BundleInstall` (or `mvim +BundleInstall +qall` for CLI lovers)
+Launch `vim` or `mvim`, run `:BundleInstall` (or `mvim +BundleInstall +qall` for CLI lovers)
