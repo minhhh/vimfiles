@@ -320,7 +320,8 @@ noremap <C-f> :Ack -Q --smart-case
 :nmap <leader>n :enew<CR>
 :nmap <leader>j :MBEbp<CR>
 :nmap <leader>k :MBEbn<CR>
-:nmap <leader>o :MBEToggle<CR>
+:nmap <leader>mo :MBEToggle<CR>
+:nmap <leader>mf :MBEFocus<CR>
 :nmap <leader>w :MBEbd<CR>
 :nmap <leader>q :MBEbd!<CR>
 
@@ -338,7 +339,6 @@ noremap <C-f> :Ack -Q --smart-case
 " Easyalign
 vnoremap <silent> <leader>a :EasyAlign<Enter>
 
-" Other function that changes file
 :nmap <leader>al :%s/\s\+$//<CR>
 :nmap <leader>ab :retab<CR>
 nnoremap <C-J> a<CR><Esc>k$
