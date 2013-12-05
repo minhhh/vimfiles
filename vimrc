@@ -18,7 +18,7 @@ Bundle 'derekwyatt/vim-scala'
 Bundle 'techlivezheng/vim-plugin-minibufexpl'
 "Bundle 'vim-scripts/AutoComplPop' # comment since this seems to slow vim down
 "for me
-Bundle 'SirVer/ultisnips'
+" Bundle 'SirVer/ultisnips'
 Bundle 'junegunn/vim-easy-align'
 Bundle 'tpope/vim-surround'
 Bundle 'jiangmiao/auto-pairs'
@@ -301,7 +301,7 @@ set diffopt+=vertical       " diff mode with vertical splits please
 " Some useful key mappings.
 " ----------------------------------------------------------------------------
 nnoremap ; :
-nnoremap , "0
+nnoremap , "*
 :nmap <F2> :w<CR>
 :imap <F2> <Esc>:w<CR>a
 :map - $
