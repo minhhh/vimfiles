@@ -23,12 +23,16 @@ Bundle 'junegunn/vim-easy-align'
 Bundle 'tpope/vim-surround'
 Bundle 'jiangmiao/auto-pairs'
 " Bundle 'Townk/vim-autoclose'
+Bundle "MarcWeber/vim-addon-mw-utils"
+Bundle "tomtom/tlib_vim"
+Bundle "garbas/vim-snipmate"
+Bundle "honza/vim-snippets"
 
 " Various editing plugins
 " Bundle 'kana/vim-textobj-user'
 " Bundle 'tpope/vim-repeat'
 " Bundle 'tpope/vim-unimpaired'
-" Bundle 'nelstrom/vim-visual-star-search'
+Bundle 'nelstrom/vim-visual-star-search'
 " Bundle 'ZoomWin'
 " Bundle 'ervandew/supertab'
 " Bundle 'tpope/vim-endwise'
