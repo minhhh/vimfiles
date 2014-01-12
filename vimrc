@@ -328,6 +328,7 @@ noremap <C-f> :Ack -Q --smart-case
 :nmap <leader>mf :MBEFocus<CR>
 :nmap <leader>w :MBEbd<CR>
 :nmap <leader>q :MBEbd!<CR>
+:nmap <leader>u :b#<CR>
 
 " Map syntastic
 :nmap <leader>b :SyntasticCheck<CR>:Errors<CR>
@@ -342,6 +343,11 @@ noremap <C-f> :Ack -Q --smart-case
 
 " Easyalign
 vnoremap <silent> <leader>a :EasyAlign<Enter>
+
+" CommandP
+:nmap <C-p> :CtrlP system("pwd")<CR>
+let g:ctrlp_map = ''
+let g:ctrlp_cmd = ''
 
 :nmap <leader>al :%s/\s\+$//<CR>
 :nmap <leader>ab :retab<CR>
