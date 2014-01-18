@@ -322,8 +322,8 @@ noremap <C-f> :Ack -Q --smart-case
 " Map buffer navigation
 :let mapleader = "-"
 :nmap <leader>n :enew<CR>
-:nmap <leader>j :MBEbp<CR>
-:nmap <leader>k :MBEbn<CR>
+:nmap <leader>j :MBEOpen<CR>:MBEFocus<CR>h
+:nmap <leader>k :MBEOpen<CR>:MBEFocus<CR>l
 :nmap <leader>mo :MBEToggle<CR>
 :nmap <leader>mf :MBEFocus<CR>
 :nmap <leader>w :MBEbd<CR>
@@ -339,20 +339,22 @@ noremap <C-f> :Ack -Q --smart-case
 :nmap <leader>sl :silent! NERDTreeClose<CR>:silent! MBEClose<CR>:silent! OpenSession<CR>:silent! NERDTree<CR>:silent! MBEOpen<CR>:wincmd l<CR> " Fix the issue with MBE, reopen NerdTree too
 :nmap <leader>sr :silent! MRU<CR>
 
-:nmap <leader>r :silent! edit<CR>
-
 " Easyalign
-vnoremap <silent> <leader>a :EasyAlign<Enter>
+vnoremap <silent> <leader>a :EasyAlign<CR>
 
 " CommandP
 :nmap <C-p> :CtrlP system("pwd")<CR>
 let g:ctrlp_map = ''
 let g:ctrlp_cmd = ''
 
+" Convenient key mappings for everyday use
 :nmap <leader>al :%s/\s\+$//<CR>
 :nmap <leader>ab :retab<CR>
-nnoremap <C-J> a<CR><Esc>k$
+nnoremap <C-j> 5j
+nnoremap <C-k> 5k
 :nmap <leader>cc :set wrap linebreak textwidth=0<CR>:set nospell<CR>
+:nmap <leader>r :silent! edit<CR>
+:imap dw <C-w>
 
 " ----------------------------------------------------------------------------
 "  reading and writing files
