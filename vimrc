@@ -305,7 +305,8 @@ set diffopt+=vertical       " diff mode with vertical splits please
 " Some useful key mappings.
 " ----------------------------------------------------------------------------
 nnoremap ; :
-nnoremap , "*
+vnoremap , "s
+nnoremap , "s
 :nmap <F2> :w<CR>
 :imap <F2> <Esc>:w<CR>a
 :map - $
