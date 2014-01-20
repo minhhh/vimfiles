@@ -346,6 +346,7 @@ vnoremap <silent> <leader>a :EasyAlign<CR>
 :nmap <C-p> :CtrlP system("pwd")<CR>
 let g:ctrlp_map = ''
 let g:ctrlp_cmd = ''
+let g:ctrlp_match_window = 'bottom,order:btt,min:1,max:10,results:20'
 
 " Convenient key mappings for everyday use
 :nmap <leader>al :%s/\s\+$//<CR>
