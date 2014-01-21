@@ -349,6 +349,8 @@ let g:ctrlp_match_window = 'bottom,order:btt,min:1,max:10,results:20'
 :nmap <leader>ab :retab<CR>
 nnoremap <C-j> 5j
 nnoremap <C-k> 5k
+vnoremap <C-j> 5j
+vnoremap <C-k> 5k
 :nmap <leader>cc :set wrap linebreak textwidth=0<CR>:set nospell<CR>
 :nmap <leader>r :silent! edit<CR>
 :imap dw <C-w>
