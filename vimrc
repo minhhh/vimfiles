@@ -315,11 +315,6 @@ nnoremap , "s
 vnoremap <C-r> "hy:%s/<C-r>h//gc<left><left><left>
 noremap <C-f> :Ack -Q --smart-case
 
-" Map tab navigation
-" :nmap <C-a><C-n> :tabnew<CR>
-" :nmap <C-a><C-j> :tabp<CR>
-" :nmap <C-a><C-k> :tabn<CR>
-
 " Map buffer navigation
 :let mapleader = "-"
 :nmap <leader>n :enew<CR>
