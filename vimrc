@@ -14,13 +14,12 @@ Bundle 'terryma/vim-multiple-cursors'
 Bundle 'xolox/vim-session'
 Bundle 'xolox/vim-misc'
 Bundle 'techlivezheng/vim-plugin-minibufexpl'
-
 "Bundle 'vim-scripts/AutoComplPop' # comment since this seems to slow vim down
 "for me
 " Bundle 'SirVer/ultisnips'
-" Bundle 'junegunn/vim-easy-align'
-" Bundle 'tpope/vim-surround'
-" Bundle 'jiangmiao/auto-pairs'
+Bundle 'junegunn/vim-easy-align'
+Bundle 'tpope/vim-surround'
+Bundle 'jiangmiao/auto-pairs'
 " Bundle "MarcWeber/vim-addon-mw-utils"
 " Bundle "tomtom/tlib_vim"
 " Bundle "garbas/vim-snipmate"
