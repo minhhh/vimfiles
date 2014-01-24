@@ -19,14 +19,13 @@ Bundle 'techlivezheng/vim-plugin-minibufexpl'
 "Bundle 'vim-scripts/AutoComplPop' # comment since this seems to slow vim down
 "for me
 " Bundle 'SirVer/ultisnips'
-Bundle 'junegunn/vim-easy-align'
-Bundle 'tpope/vim-surround'
-Bundle 'jiangmiao/auto-pairs'
-" Bundle 'Townk/vim-autoclose'
-Bundle "MarcWeber/vim-addon-mw-utils"
-Bundle "tomtom/tlib_vim"
-Bundle "garbas/vim-snipmate"
-Bundle "honza/vim-snippets"
+" Bundle 'junegunn/vim-easy-align'
+" Bundle 'tpope/vim-surround'
+" Bundle 'jiangmiao/auto-pairs'
+" Bundle "MarcWeber/vim-addon-mw-utils"
+" Bundle "tomtom/tlib_vim"
+" Bundle "garbas/vim-snipmate"
+" Bundle "honza/vim-snippets"
 
 " Various editing plugins
 " Bundle 'kana/vim-textobj-user'
@@ -65,10 +64,6 @@ endif
 
 " Buffer plugins
 "Bundle 'bufkill.vim'
-
-" Colorschemes
-" Bundle 'jelera/vim-javascript-syntax'
-
 
 " Ruby plugins
 " Bundle 'vim-ruby/vim-ruby'
@@ -137,6 +132,7 @@ set scrolloff=3       " number of screen lines to show around
 " set linebreak         " For lines longer than the window,
                       " wrap intelligently. This doesn't
                       " insert hard line breaks.
+:set wrap linebreak textwidth=0
 
 set showbreak=↪\ \    " string to put before wrapped screen
 " lines
