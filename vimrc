@@ -8,14 +8,13 @@ call vundle#rc()
 
 " Let Vundle manage Vundle. Required!
 Bundle 'gmarik/vundle'
-
 Bundle 'Lokaltog/vim-powerline'
 Bundle 'scrooloose/nerdtree'
 Bundle 'terryma/vim-multiple-cursors'
 Bundle 'xolox/vim-session'
 Bundle 'xolox/vim-misc'
-Bundle 'derekwyatt/vim-scala'
 Bundle 'techlivezheng/vim-plugin-minibufexpl'
+
 "Bundle 'vim-scripts/AutoComplPop' # comment since this seems to slow vim down
 "for me
 " Bundle 'SirVer/ultisnips'
@@ -129,13 +128,7 @@ set dir=~/.vimswap//,/var/tmp//,/tmp//
 set scrolloff=3       " number of screen lines to show around
 " the cursor
 
-" set linebreak         " For lines longer than the window,
-                      " wrap intelligently. This doesn't
-                      " insert hard line breaks.
-:set wrap linebreak textwidth=0
-
-set showbreak=↪\ \    " string to put before wrapped screen
-" lines
+set showbreak=↪\ \    " string to put before wrapped screen lines
 
 set sidescrolloff=2   " min # of columns to keep left/right of cursor
 set display+=lastline " show last line, even if it doesn't fit in the window
@@ -352,9 +345,12 @@ nnoremap <C-j> 5j
 nnoremap <C-k> 5k
 vnoremap <C-j> 5j
 vnoremap <C-k> 5k
-:nmap <leader>cc :set wrap linebreak textwidth=0<CR>:set nospell<CR>
 :nmap <leader>r :silent! edit<CR>
 :imap dw <C-w>
+
+" Disable spelling and wrapline
+au BufNewFile,BufRead,BufEnter *.* set nospell
+au BufNewFile,BufRead,BufEnter *.* set wrap linebreak textwidth=0
 
 " ----------------------------------------------------------------------------
 "  reading and writing files
