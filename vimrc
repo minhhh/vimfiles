@@ -325,6 +325,11 @@ noremap <C-f> :Ack -Q --smart-case
 :nmap <leader>w :MBEbd<CR>
 :nmap <leader>q :MBEbd!<CR>
 :nmap <leader>u :b#<CR>
+:imap <leader>j <Esc>:MBEOpen<CR>:MBEFocus<CR>h
+:imap <leader>k <Esc>:MBEOpen<CR>:MBEFocus<CR>l
+:imap <leader>w <Esc>:MBEbd<CR>
+:imap <leader>q <Esc>:MBEbd!<CR>
+:imap <leader>u <Esc>:b#<CR>
 
 " Map syntastic
 :nmap <leader>b :SyntasticCheck<CR>:Errors<CR>
