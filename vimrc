@@ -306,15 +306,14 @@ noremap <C-f> :Ack -Q --smart-case
 " Map buffer navigation
 :let mapleader = "-"
 :nmap <leader>n :enew<CR>
-:nmap <leader>j :MBEOpen<CR>:MBEFocus<CR>h
-:nmap <leader>k :MBEOpen<CR>:MBEFocus<CR>l
+:nmap <leader>h :MBEOpen<CR>:MBEFocus<CR>h
+:nmap <leader>l :MBEOpen<CR>:MBEFocus<CR>l
 :nmap <leader>mo :MBEToggle<CR>
 :nmap <leader>mf :MBEFocus<CR>
 :nmap <leader>w :MBEbd<CR>
 :nmap <leader>q :MBEbd!<CR>
 :nmap <leader>u :b#<CR>
-:imap <leader>j <Esc>:MBEOpen<CR>:MBEFocus<CR>h
-:imap <leader>k <Esc>:MBEOpen<CR>:MBEFocus<CR>l
+:imap <leader>h <Esc>:MBEOpen<CR>:MBEFocus<CR>h
 :imap <leader>w <Esc>:MBEbd<CR>
 :imap <leader>q <Esc>:MBEbd!<CR>
 :imap <leader>u <Esc>:b#<CR>
