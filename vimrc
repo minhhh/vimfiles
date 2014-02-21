@@ -56,8 +56,8 @@ Bundle 'chrisbra/Recover.vim'
 
 " Tmux plugins
 if executable('tmux')
-  Bundle 'christoomey/vim-tmux-navigator'
-  Bundle 'sjl/vitality.vim'
+  " Bundle 'christoomey/vim-tmux-navigator'
+  " Bundle 'sjl/vitality.vim'
 endif
 
 " Buffer plugins
