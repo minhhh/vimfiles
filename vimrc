@@ -344,8 +344,6 @@ nnoremap <C-j> 5j
 nnoremap <C-k> 5k
 vnoremap <C-j> 5j
 vnoremap <C-k> 5k
-onoremap <C-j> 5j
-onoremap <C-k> 5k
 :nmap <leader>r :silent! edit<CR>
 :imap dw <C-w>
 
