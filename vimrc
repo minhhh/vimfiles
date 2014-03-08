@@ -220,7 +220,7 @@ set mouse=v
 set showcmd         " In the status bar, show incomplete commands
                     " as they are typed
 
-set noshowmode      " don't display the current mode (Insert, Visual, Replace)
+" set noshowmode      " don't display the current mode (Insert, Visual, Replace)
                     " in the status line. This info is already shown in the
                     " Powerline status bar.
 
@@ -344,6 +344,8 @@ nnoremap <C-j> 5j
 nnoremap <C-k> 5k
 vnoremap <C-j> 5j
 vnoremap <C-k> 5k
+onoremap <C-j> 5j
+onoremap <C-k> 5k
 :nmap <leader>r :silent! edit<CR>
 :imap dw <C-w>
 
