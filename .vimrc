@@ -5,10 +5,8 @@ filetype off      " Required for Vundle
 
 set rtp+=~/.vim/bundle/vundle/  " Add vundle to the RuntimePath
 call vundle#rc()
-
 " Let Vundle manage Vundle. Required!
 Bundle 'gmarik/vundle'
-" Bundle 'Lokaltog/vim-powerline'
 Bundle 'bling/vim-airline'
 Bundle 'scrooloose/nerdtree'
 Bundle 'terryma/vim-multiple-cursors'
@@ -17,14 +15,15 @@ Bundle 'xolox/vim-misc'
 Bundle 'techlivezheng/vim-plugin-minibufexpl'
 "Bundle 'vim-scripts/AutoComplPop' # comment since this seems to slow vim down
 "for me
-" Bundle 'SirVer/ultisnips'
 Bundle 'junegunn/vim-easy-align'
 Bundle 'tpope/vim-surround'
 Bundle 'jiangmiao/auto-pairs'
+" Bundle 'Raimondi/delimitMate'
 " Bundle "MarcWeber/vim-addon-mw-utils"
 " Bundle "tomtom/tlib_vim"
 " Bundle "garbas/vim-snipmate"
 " Bundle "honza/vim-snippets"
+Bundle 'michalliu/sourcebeautify.vim'
 
 " Various editing plugins
 " Bundle 'kana/vim-textobj-user'
@@ -37,6 +36,10 @@ Bundle 'nelstrom/vim-visual-star-search'
 " Bundle 'godlygeek/tabular'
 " Bundle 'HarnoRanaivo/vim-neatfoldtext'
 " Bundle 'maxbrunsfeld/vim-yankstack'
+
+Bundle 'vim-scripts/matchit.zip'
+Bundle 'vim-scripts/closetag.vim'
+" Bundle 'vim-scripts/taglist.vim'
 
 " Comment plugin
 Bundle 'tpope/vim-commentary'
