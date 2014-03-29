@@ -21,8 +21,8 @@ Bundle 'jiangmiao/auto-pairs'
 " Bundle 'Raimondi/delimitMate'
 " Bundle "MarcWeber/vim-addon-mw-utils"
 " Bundle "tomtom/tlib_vim"
-" Bundle "garbas/vim-snipmate"
-" Bundle "honza/vim-snippets"
+Bundle "garbas/vim-snipmate"
+Bundle "minhhh/vim-snippets"
 Bundle 'michalliu/sourcebeautify.vim'
 
 " Various editing plugins
