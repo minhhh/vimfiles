@@ -19,8 +19,8 @@ Bundle 'junegunn/vim-easy-align'
 Bundle 'tpope/vim-surround'
 Bundle 'jiangmiao/auto-pairs'
 " Bundle 'Raimondi/delimitMate'
-" Bundle "MarcWeber/vim-addon-mw-utils"
-" Bundle "tomtom/tlib_vim"
+Bundle "MarcWeber/vim-addon-mw-utils"
+Bundle "tomtom/tlib_vim"
 Bundle "garbas/vim-snipmate"
 Bundle "minhhh/vim-snippets"
 Bundle 'michalliu/sourcebeautify.vim'
