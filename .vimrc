@@ -464,7 +464,6 @@ autocmd vimenter * :silent! NERDTree
 
 " ----------------------------------------------------------------------------
 " Session stuff
-" Update: unfortunately this doesn't work well with MiniBufExplorer
 " ----------------------------------------------------------------------------
 :let g:session_autosave=0
 :let g:session_autoload='no'
@@ -472,8 +471,22 @@ autocmd vimenter * :silent! NERDTree
 :let g:session_verbose_messages=0
 
 " ----------------------------------------------------------------------------
+" Qargs: Run command on quickfix results
+" ----------------------------------------------------------------------------
+command! -nargs=0 -bar Qargs execute 'args ' . QuickfixFilenames()
+function! QuickfixFilenames()
+  " Building a hash ensures we get each buffer only once
+  let buffer_numbers = {}
+  for quickfix_item in getqflist()
+    let buffer_numbers[quickfix_item['bufnr']] = bufname(quickfix_item['bufnr'])
+  endfor
+  return join(values(buffer_numbers))
+endfunction
+
+" ----------------------------------------------------------------------------
 " Allow overriding these settings
 " ----------------------------------------------------------------------------
 if filereadable(expand("~/.vimrc.local"))
   source ~/.vimrc.local
 endif
+
