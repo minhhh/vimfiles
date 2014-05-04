@@ -9,23 +9,17 @@ Vim files for OSX, Windows and Linux
 
     $ git clone git@bitbucket.org:minhhh/vimfiles.git ~/.vim
 
+    $ git submodule update --recursive
+
 
 2. Create symlinks to .vimrc and .gvimrc:
 
     $ ln -s ~/.vim/vimrc ~/.vimrc
+
     $ ln -s ~/.vim/gvimrc ~/.gvimrc
 
+3. Install configured bundles:
 
-3. Make the `.vim/bundle` directory:
+Launch `vim` or `mvim`, run `:BundleInstall`
 
-    $ mkdir ~/.vim/bundle
-
-
-4. Setup [Vundle]:
-
-    $ git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
-
-
-5. Install configured bundles:
-
-Launch `vim` or `mvim`, run `:BundleInstall` (or `mvim +BundleInstall +qall` for CLI lovers)
+(or `mvim +BundleInstall +qall` for CLI lovers)
