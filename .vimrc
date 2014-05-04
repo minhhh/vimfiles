@@ -350,6 +350,16 @@ vnoremap <C-k> 5k
 :nmap <leader>r :silent! edit<CR>
 :imap dw <C-w>
 
+" Map convenient mark with capital letter for it to work cross files
+nnoremap ma mA
+nnoremap 'a 'A
+nnoremap ms mS
+nnoremap 's 'S
+nnoremap md mD
+nnoremap 'd 'D
+nnoremap mf mF
+nnoremap 'f 'F
+
 " Disable spelling and wrapline
 au BufNewFile,BufRead,BufEnter *.* set nospell
 au BufNewFile,BufRead,BufEnter *.* set wrap linebreak textwidth=0
