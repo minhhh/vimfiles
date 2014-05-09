@@ -1,6 +1,6 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
-git clone https://github.com/dougireton/vimfiles.git ~/.vim
+git clone https://github.com/minhhh/vimfiles.git ~/.vim
 ln -s ~/.vim/vimrc ~/.vimrc
 cd ~/.vim
 git submodule init

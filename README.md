@@ -11,12 +11,9 @@ Vim files for OSX, Windows and Linux
 
         $ git submodule update --recursive
 
-
 2. Create symlinks to .vimrc and .gvimrc:
 
         $ ln -s ~/.vim/vimrc ~/.vimrc
-
-        $ ln -s ~/.vim/gvimrc ~/.gvimrc
 
 3. Install configured bundles:
 
