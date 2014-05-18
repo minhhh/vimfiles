@@ -74,6 +74,9 @@ From plugin commentary
 Sort a list of lines
 
     :sort - Select several lines in visual mode then run this
+    :!sort - Sort with external command
+
+    C-a C-x    - Increase/Decrease number under cursor
 
 ### Undo/Redo changes
 
@@ -113,7 +116,14 @@ Sort a list of lines
     va( - Select around (
     va{ - Select around {
     vt( - Select TILL (
-    vf( - Select INCLUDING (
+    vf( - select including (
+    viB - Select inside block
+    vaB - Select around block
+    >iB - Indent inside block
+    >aB - Indent around block
+
+### Quick Indent
+
 
 ### Align with Vim easy align
 Supposed you map the trigger key to `<Enter>`
@@ -125,7 +135,7 @@ Supposed you map the trigger key to `<Enter>`
     <Enter>:          Alignment around 1st colon (key: value)                     :'<,'>EasyAlign:
     <Enter><Right>:   Alignment around 1st colon (key : value)                    :'<,'>EasyAlign:s0l1
     <Enter>=          Alignment around 1st operators with =                       : '<,'>EasyAlign=
-    <Enter>2=         Alignment around 2nd operators with =                       : '<,'>EasyAlign2=
+    <Enter>2=         Alignment around 2nd operators with =: '<,'>EasyAlign2=
     <Enter>3=         Alignment around 3rd operators with =                       : '<,'>EasyAlign3=
     <Enter>*=         Alignment around all operators with =                       : '<,'>EasyAlign*=
     <Enter>**=        Left-right alternating alignment around all = operators     : '<,'>EasyAlign**=
@@ -216,4 +226,6 @@ Then run `ack` on command line like this
 
 # TIPS
 https://twitter.com/vimtips
+
+http://www.moolenaar.net/habits.html
 

@@ -364,6 +364,13 @@ nnoremap 'f 'F
 au BufNewFile,BufRead,BufEnter *.* set nospell
 au BufNewFile,BufRead,BufEnter *.* set wrap linebreak textwidth=0
 
+
+" ----------------------------------------------------------------------------
+" Some useful abbr
+" ----------------------------------------------------------------------------
+abbr thsi this
+abbr hte the
+
 " ----------------------------------------------------------------------------
 "  reading and writing files
 " ----------------------------------------------------------------------------
