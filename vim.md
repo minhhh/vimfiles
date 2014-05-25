@@ -155,6 +155,10 @@ Supposed you map the trigger key to `<Enter>`
     *              - Search for word under cursor bounded
     g*             - Search for word under cursor bounded
 
+### Making a list of numbers
+
+    :put =map(range(1,150), 'printf(''WHat%d'', v:val)')
+
 ### Search for selected text
 Select text in visual mode, then copy it with %%y%%.
 Then switch to search, and paste the copied word with %%C-R 0%%
