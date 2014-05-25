@@ -123,7 +123,10 @@ Sort a list of lines
     >aB - Indent around block
 
 ### Quick Indent
+Select a block, then `C-V`, then `:`, then `le 3` would give a 3-space indentation.
 
+### Visual block editing
+Select a block, then `C-V`, then `I`, then what ever you edit afterwards will be applied to the block.
 
 ### Align with Vim easy align
 Supposed you map the trigger key to `<Enter>`
@@ -156,7 +159,7 @@ Supposed you map the trigger key to `<Enter>`
 Select text in visual mode, then copy it with %%y%%.
 Then switch to search, and paste the copied word with %%C-R 0%%
 
-    C - r - Quickly replace selected words (Custom mapping)
+    C-r - Quickly replace selected words (Custom mapping)
 
 Using custom command `Qargs`, we can replace accross files like so
 
