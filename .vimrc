@@ -370,6 +370,7 @@ au BufNewFile,BufRead,BufEnter *.* set wrap linebreak textwidth=0
 " ----------------------------------------------------------------------------
 abbr thsi this
 abbr hte the
+abbr btu but
 
 " ----------------------------------------------------------------------------
 "  reading and writing files
