@@ -74,7 +74,7 @@ endif
 " Bundle 'nelstrom/vim-textobj-rubyblock'
 
 " JSON plugins
-Bundle 'elzr/vim-json'
+" Bundle 'elzr/vim-json'
 
 " Markdown plugins
 Bundle 'tpope/vim-markdown'
