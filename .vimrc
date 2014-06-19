@@ -94,6 +94,7 @@ Plugin 'scrooloose/syntastic'
 "Plugin 'gregsexton/gitv'
 "Plugin 'mhinz/vim-signify'
 
+call vundle#end()
 if has('autocmd')
   filetype plugin indent on   " Turn on Filetype detection, plugins, and
                               " indent
