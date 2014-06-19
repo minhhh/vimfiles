@@ -3,96 +3,96 @@
 " ----------------------------------------------------------------------------
 filetype off      " Required for Vundle
 
-set rtp+=~/.vim/bundle/vundle/  " Add vundle to the RuntimePath
-call vundle#rc()
+set rtp+=~/.vim/bundle/Vundle.vim  " Add vundle to the RuntimePath
+call vundle#begin()
 " Let Vundle manage Vundle. Required!
-Bundle 'gmarik/vundle'
-Bundle 'bling/vim-airline'
-Bundle 'scrooloose/nerdtree'
-Bundle 'terryma/vim-multiple-cursors'
-Bundle 'xolox/vim-session'
-Bundle 'xolox/vim-misc'
-Bundle 'techlivezheng/vim-plugin-minibufexpl'
-"Bundle 'vim-scripts/AutoComplPop' # comment since this seems to slow vim down
+Plugin 'gmarik/Vundle.vim'
+Plugin 'bling/vim-airline'
+Plugin 'scrooloose/nerdtree'
+Plugin 'terryma/vim-multiple-cursors'
+Plugin 'xolox/vim-session'
+Plugin 'xolox/vim-misc'
+Plugin 'techlivezheng/vim-plugin-minibufexpl'
+"Plugin 'vim-scripts/AutoComplPop' # comment since this seems to slow vim down
 "for me
-Bundle 'junegunn/vim-easy-align'
-Bundle 'tpope/vim-surround'
-Bundle 'jiangmiao/auto-pairs'
-" Bundle 'Raimondi/delimitMate'
-Bundle "MarcWeber/vim-addon-mw-utils"
-Bundle "tomtom/tlib_vim"
-Bundle "garbas/vim-snipmate"
-Bundle "minhhh/vim-snippets"
-Bundle 'michalliu/sourcebeautify.vim'
+Plugin 'junegunn/vim-easy-align'
+Plugin 'tpope/vim-surround'
+Plugin 'jiangmiao/auto-pairs'
+" Plugin 'Raimondi/delimitMate'
+Plugin 'MarcWeber/vim-addon-mw-utils'
+Plugin 'tomtom/tlib_vim'
+Plugin 'garbas/vim-snipmate'
+Plugin 'minhhh/vim-snippets'
+Plugin 'michalliu/sourcebeautify.vim'
 
 " Various editing plugins
-" Bundle 'kana/vim-textobj-user'
-" Bundle 'tpope/vim-repeat'
-" Bundle 'tpope/vim-unimpaired'
-Bundle 'nelstrom/vim-visual-star-search'
-" Bundle 'ZoomWin'
-" Bundle 'ervandew/supertab'
-" Bundle 'tpope/vim-endwise'
-" Bundle 'godlygeek/tabular'
-" Bundle 'HarnoRanaivo/vim-neatfoldtext'
-" Bundle 'maxbrunsfeld/vim-yankstack'
+" Plugin 'kana/vim-textobj-user'
+" Plugin 'tpope/vim-repeat'
+" Plugin 'tpope/vim-unimpaired'
+Plugin 'nelstrom/vim-visual-star-search'
+" Plugin 'ZoomWin'
+" Plugin 'ervandew/supertab'
+" Plugin 'tpope/vim-endwise'
+" Plugin 'godlygeek/tabular'
+" Plugin 'HarnoRanaivo/vim-neatfoldtext'
+" Plugin 'maxbrunsfeld/vim-yankstack'
 
-Bundle 'vim-scripts/matchit.zip'
-Bundle 'vim-scripts/closetag.vim'
-" Bundle 'vim-scripts/taglist.vim'
+Plugin 'vim-scripts/matchit.zip'
+Plugin 'vim-scripts/closetag.vim'
+" Plugin 'vim-scripts/taglist.vim'
 
 " Comment plugin
-Bundle 'tpope/vim-commentary'
+Plugin 'tpope/vim-commentary'
 
 " File managers/explorers
-Bundle 'kien/ctrlp.vim'
+Plugin 'kien/ctrlp.vim'
 
 if executable('ack')
-  Bundle 'mileszs/ack.vim'
+  Plugin 'mileszs/ack.vim'
 endif
 
 if executable('ag')
-  Bundle 'rking/ag.vim'
+  Plugin 'rking/ag.vim'
 endif
 
-" Bundle 'mhinz/vim-startify'
-Bundle 'chrisbra/Recover.vim'
+" Plugin 'mhinz/vim-startify'
+Plugin 'chrisbra/Recover.vim'
 
 " Tmux plugins
 if executable('tmux')
-  " Bundle 'christoomey/vim-tmux-navigator'
-  " Bundle 'sjl/vitality.vim'
+  " Plugin 'christoomey/vim-tmux-navigator'
+  " Plugin 'sjl/vitality.vim'
 endif
 
 " Buffer plugins
-"Bundle 'bufkill.vim'
+"Plugin 'bufkill.vim'
 
 " Ruby plugins
-" Bundle 'vim-ruby/vim-ruby'
-" Bundle 'thoughtbot/vim-rspec'
-" Bundle 'tpope/vim-bundler'
-" Bundle 'nelstrom/vim-textobj-rubyblock'
+" Plugin 'vim-ruby/vim-ruby'
+" Plugin 'thoughtbot/vim-rspec'
+" Plugin 'tpope/vim-bundler'
+" Plugin 'nelstrom/vim-textobj-rubyblock'
 
 " JSON plugins
-" Bundle 'elzr/vim-json'
+" Plugin 'elzr/vim-json'
 
 " Markdown plugins
-Bundle 'tpope/vim-markdown'
+Plugin 'tpope/vim-markdown'
 
 " PowerShell plugins
-" Bundle 'dougireton/vim-ps1'
+" Plugin 'dougireton/vim-ps1'
 
 " Wiki
-" Bundle 'vimwiki'
+" Plugin 'vimwiki'
 
 " Syntax check on buffer save
-Bundle 'scrooloose/syntastic'
+Plugin 'scrooloose/syntastic'
 
 " Source Control plugins
-"Bundle 'tpope/vim-git'
-"Bundle 'tpope/vim-fugitive'
-"Bundle 'gregsexton/gitv'
-"Bundle 'mhinz/vim-signify'
+"Plugin 'tpope/vim-git'
+"Plugin 'tpope/vim-fugitive'
+"Plugin 'gregsexton/gitv'
+"Plugin 'mhinz/vim-signify'
 
 if has('autocmd')
   filetype plugin indent on   " Turn on Filetype detection, plugins, and
