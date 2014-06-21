@@ -2,8 +2,8 @@
 
 ### Open save files
 
-    :wq<Return>         - Quit vi, writing out modified file to file named in original invocation
-    :q<Return>          - Quit (or exit) vi
+    :wq<Return>         - Quit vi, writing out modified file to file named in original invocatioê
+    :q<Return>          - Quit!(or exit) vi
     :q!<Return>         - Quit vi even though latest changes have not been saved for this vi call
     :e filename         - Open a new file. You can use the Tab key
     :w or <F2>          - Save file. Custom mapping
@@ -14,7 +14,7 @@
 ### Basic Moving around
 
     0                                - To line beginning
-    -                                - Custom map To line End
+    $                                - To line end
     e                                - Move forward a word
     b                                - Move backward a word
     :0<Return> or 1G or gg           - Move cursor to first line in file
@@ -49,6 +49,8 @@
     C-w or db  - Delete word backward
     de         - Delete word forward
     diw        - Delete word under cursor
+    bdf<space> - Delete word under cursor including the next space
+    bye        - Copy the current word
     D          - delete the remainder of the line, starting with current cursor position
     C          - delete the remainder of the line, starting with current cursor position and go to insert mode
     d0         - deletes from current cursor position to the beginning of the line.
@@ -73,7 +75,7 @@ From plugin commentary
 
 Sort a list of lines
 
-    :sort - Select several lines in visual mode then run this
+    :sort  - Select several lines in visual mode then run this
     :!sort - Sort with external command
 
     C-a C-x    - Increase/Decrease number under cursor
@@ -93,6 +95,7 @@ Sort a list of lines
     "ap - Paste using a register
 
 ### Select
+
     v  - Start highlighting characters. Use the normal movement keys and commands to select text for highlighting.
     gv - recontentselect last visual block
     V  - Start highlighting lines.
@@ -122,13 +125,13 @@ Sort a list of lines
     >iB - Indent inside block
     >aB - Indent around block
 
-### Quick Indent
-Select a block, then `C-V`, then `:`, then `le 3` would give a 3-space indentation.
+### Block editing
 
-### Visual block editing
-Select a block, then `C-V`, then `I`, then what ever you edit afterwards will be applied to the block.
+    Select a block, then `C-V`, then `:`, then `le 3` would give a 3-space indentation.
+    Select a block, then `C-V`, then `I`, then what ever you edit afterwards will be applied to the block.
 
 ### Align with Vim easy align
+
 Supposed you map the trigger key to `<Enter>`
 
     <Enter><space>    Alignment around 1st whitespaces                            : '<,'>EasyAlign\
@@ -207,9 +210,9 @@ Then run `ack` on command line like this
 
 ### Tabs
 
+    :tabn   - Next tab tab
     :tabnew - New tab
     :tabp   - Previous tab
-    :tabn   - Next tab tab
 
 ### Execute external command
 
