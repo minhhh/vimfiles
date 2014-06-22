@@ -352,6 +352,8 @@ vnoremap <C-k> 5k
 :imap dw <C-w>
 nnoremap [[ [{
 nnoremap ]] ]}
+vnoremap [[ [{
+vnoremap ]] ]}
 
 " Map convenient mark with capital letter for it to work cross files
 nnoremap ma mA
