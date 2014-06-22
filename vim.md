@@ -50,7 +50,7 @@
     de         - Delete word forward
     diw        - Delete word under cursor
     bdf<space> - Delete word under cursor including the next space
-    bye        - Copy the current word
+    yiw        - Copy the current word
     D          - delete the remainder of the line, starting with current cursor position
     C          - delete the remainder of the line, starting with current cursor position and go to insert mode
     d0         - deletes from current cursor position to the beginning of the line.
