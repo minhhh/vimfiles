@@ -41,6 +41,7 @@ Plugin 'vim-scripts/matchit.zip'
 Plugin 'vim-scripts/closetag.vim'
 " Plugin 'vim-scripts/taglist.vim'
 
+
 " Comment plugin
 Plugin 'tpope/vim-commentary'
 
@@ -344,10 +345,10 @@ let g:ctrlp_match_window = 'bottom,order:btt,min:1,max:10,results:20'
 " Convenient key mappings for everyday use
 :nmap <leader>al :%s/\s\+$//<CR>
 :nmap <leader>ab :retab<CR>
-nnoremap <C-j> 5j
-nnoremap <C-k> 5k
-vnoremap <C-j> 5j
-vnoremap <C-k> 5k
+nnoremap <C-j> 3j
+nnoremap <C-k> 3k
+vnoremap <C-j> 3j
+vnoremap <C-k> 3k
 :nmap <leader>r :silent! edit<CR>
 :imap dw <C-w>
 nnoremap [[ [{
