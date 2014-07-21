@@ -247,3 +247,6 @@ https://twitter.com/vimtips
 http://www.moolenaar.net/habits.html
 
 [More instantly better Vim](http://www.youtube.com/watch?v=aHm36-na4-4)
+
+[Learn Vimscript the Hard Way](http://learnvimscriptthehardway.stevelosh.com)
+
