@@ -13,7 +13,7 @@ Plugin 'terryma/vim-multiple-cursors'
 Plugin 'xolox/vim-session'
 Plugin 'xolox/vim-misc'
 Plugin 'techlivezheng/vim-plugin-minibufexpl'
-"Plugin 'vim-scripts/AutoComplPop' # comment since this seems to slow vim down
+Plugin 'vim-scripts/AutoComplPop' " comment since this seems to slow vim down
 "for me
 Plugin 'junegunn/vim-easy-align'
 Plugin 'tpope/vim-surround'
@@ -40,6 +40,7 @@ Plugin 'nelstrom/vim-visual-star-search'
 Plugin 'vim-scripts/matchit.zip'
 Plugin 'vim-scripts/closetag.vim'
 " Plugin 'vim-scripts/taglist.vim'
+Plugin 'MattesGroeger/vim-bookmarks'
 
 
 " Comment plugin
@@ -357,14 +358,8 @@ vnoremap [[ [{
 vnoremap ]] ]}
 
 " Map convenient mark with capital letter for it to work cross files
-nnoremap ma mA
-nnoremap 'a 'A
-nnoremap ms mS
-nnoremap 's 'S
-nnoremap md mD
-nnoremap 'd 'D
-nnoremap mf mF
-nnoremap 'f 'F
+nnoremap ms :SaveBookmarks /tmp/vimbm<CR>
+nnoremap ml :LoadBookmarks /tmp/vimbm<CR>
 
 " Disable spelling and wrapline
 au BufNewFile,BufRead,BufEnter *.* set nospell
