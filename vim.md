@@ -222,7 +222,7 @@ Then run `ack` on command line like this
     :{range}!command - Replace the selection with the output of the external command.
     :%!tidy -qicbn -asxhtml - Tidy up the whole file HTML (provided that tidy is already installed)
 
-### Marks
+### Marks and Bookmark
 
     ' followed by a character a-Z - Go to the line beginning of a mark
     `.                            - Last modified position
@@ -232,6 +232,9 @@ Then run `ack` on command line like this
 ### Using help
 
     :set all - See all settings
+
+### Others
+    :so .vimrc - Reload .vimrc
 
 
 # TIPS
