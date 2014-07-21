@@ -80,6 +80,10 @@ Sort a list of lines
 
     C-a C-x    - Increase/Decrease number under cursor
 
+Remove lines that don't match a pattern
+
+    :g!/www\.example\.com/d
+
 ### Undo/Redo changes
 
     .   - Repeat the last command that modified the file.
@@ -242,3 +246,4 @@ https://twitter.com/vimtips
 
 http://www.moolenaar.net/habits.html
 
+[More instantly better Vim](http://www.youtube.com/watch?v=aHm36-na4-4)
