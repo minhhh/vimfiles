@@ -90,6 +90,9 @@ Plugin 'tpope/vim-markdown'
 " Syntax check on buffer save
 Plugin 'scrooloose/syntastic'
 
+Plugin 'tpope/vim-fireplace'
+Plugin 'tpope/vim-leiningen'
+
 " Source Control plugins
 "Plugin 'tpope/vim-git'
 "Plugin 'tpope/vim-fugitive'
@@ -358,8 +361,8 @@ vnoremap [[ [{
 vnoremap ]] ]}
 
 " Map convenient mark with capital letter for it to work cross files
-nnoremap ms :SaveBookmarks /tmp/vimbm<CR>
-nnoremap ml :LoadBookmarks /tmp/vimbm<CR>
+nnoremap ms :BookmarkSave /tmp/vimbm<CR>
+nnoremap ml :silent! BookmarkLoad /tmp/vimbm<CR>
 
 " Disable spelling and wrapline
 au BufNewFile,BufRead,BufEnter *.* set nospell
