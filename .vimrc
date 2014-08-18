@@ -368,14 +368,6 @@ nnoremap ml :silent! BookmarkLoad /tmp/vimbm<CR>
 au BufNewFile,BufRead,BufEnter *.* set nospell
 au BufNewFile,BufRead,BufEnter *.* set wrap linebreak textwidth=0
 
-
-" ----------------------------------------------------------------------------
-" Some useful abbr
-" ----------------------------------------------------------------------------
-abbr thsi this
-abbr hte the
-abbr btu but
-
 " ----------------------------------------------------------------------------
 "  reading and writing files
 " ----------------------------------------------------------------------------
@@ -508,7 +500,7 @@ endfunction
 " ----------------------------------------------------------------------------
 " Allow overriding these settings
 " ----------------------------------------------------------------------------
-if filereadable(expand("~/.vimrc.local"))
-  source ~/.vimrc.local
+if filereadable(expand("~/.vim/.vimrc.local"))
+  source ~/.vim/.vimrc.local
 endif
 
