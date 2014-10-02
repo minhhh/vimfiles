@@ -36,6 +36,8 @@
     ''     - Move to last cursor position
     go     - Preview a file. Works with quickfix and NERDTree
 
+    number C-^ - Go to a buffer by number
+
 ### Switch between modes
 
     C-U or Esc - Switch to normal mode
@@ -76,7 +78,6 @@ From plugin commentary
 Sort a list of lines
 
     :sort  - Select several lines in visual mode then run this
-    :!sort - Sort with external command
 
     C-a C-x    - Increase/Decrease number under cursor
 
@@ -221,10 +222,14 @@ Then run `ack` on command line like this
 ### Execute external command
 
     :! - Execute a shell. If a is specified, the program which is executed using ! uses the specified line(s) as standard input, and will replace those lines with the standard output of the program executed. "!!" executes a program using the current line as input. For example, "!4jsort" will take five lines from the current cursor position and execute sort. After typing the command, there will be a single exclamation point where you can type the command in.
-    :r !ls - Print the current directory content
-    :r !command - Add the output of the external command
     :{range}!command - Replace the selection with the output of the external command.
-    :%!tidy -qicbn -asxhtml - Tidy up the whole file HTML (provided that tidy is already installed)
+
+Useful tricks
+
+    :r !ls                   -  Print the current directory content
+    :%!tidy -qicbn -asxhtml  -  Tidy up the whole file HTML (provided that tidy is already installed)
+    :{range}!sort            -  Sort with external command
+    :{range}!column -t       -  Columnate a table
 
 ### Marks and Bookmark
 
