@@ -7,7 +7,7 @@ Vim files for OSX, Windows and Linux
 1. Clone this repository:
 
         $ git clone git@bitbucket.org:minhhh/vimfiles.git ~/.vim
-
+        $ git submodule init
         $ git submodule update --recursive
 
 2. Create symlinks to .vimrc and .gvimrc:
