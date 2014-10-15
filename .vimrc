@@ -42,6 +42,9 @@ Plugin 'vim-scripts/closetag.vim'
 " Plugin 'vim-scripts/taglist.vim'
 Plugin 'MattesGroeger/vim-bookmarks'
 
+Plugin 'eiginn/netrw'
+
+
 
 " Comment plugin
 Plugin 'tpope/vim-commentary'
