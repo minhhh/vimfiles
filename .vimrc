@@ -92,6 +92,7 @@ Plugin 'scrooloose/syntastic'
 
 Plugin 'tpope/vim-fireplace'
 Plugin 'tpope/vim-leiningen'
+Plugin 'davidhalter/jedi-vim'
 
 " Source Control plugins
 "Plugin 'tpope/vim-git'
