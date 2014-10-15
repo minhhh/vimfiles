@@ -311,7 +311,6 @@ vnoremap , "s
 nnoremap , "s
 :nmap <F2> :w<CR>
 :imap <F2> <Esc>:w<CR>a
-:map - $
 :nmap <F4> :q<CR>
 :imap <F4> <Esc>:q<CR>a
 vnoremap <C-r> "hy:%s/<C-r>h//gc<left><left><left>
@@ -324,11 +323,10 @@ noremap <C-f> :Ack -Q --smart-case
 :nmap <leader>l :MBEOpen<CR>:MBEFocus<CR>l
 :nmap <leader>mo :MBEToggle<CR>
 :nmap <leader>mf :MBEFocus<CR>
-:nmap <leader>w :MBEbd<CR>
 :nmap <leader>q :MBEbd!<CR>
+" Switch to previous buffer
 :nmap <leader>u :b#<CR>
 :imap <leader>h <Esc>:MBEOpen<CR>:MBEFocus<CR>h
-:imap <leader>w <Esc>:MBEbd<CR>
 :imap <leader>q <Esc>:MBEbd!<CR>
 :imap <leader>u <Esc>:b#<CR>
 
