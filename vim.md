@@ -152,6 +152,9 @@ Supposed you map the trigger key to `<Enter>`
     <Enter>**=        Left-right alternating alignment around all = operators     : '<,'>EasyAlign**=
     <Enter><Enter>=   Right alignment around 1st equals signs                     : '<,'>EasyAlign!=
     <Enter><Enter>**= Right-left alternating alignment around all = operators     : '<,'>EasyAlign!**=
+    <Enter><Enter>**= align by tab                                                : '<,'>EasyAlign * /[\t]/
+
+
 
 ### Search and replace
 
