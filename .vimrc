@@ -47,7 +47,8 @@ Plugin 'eiginn/netrw'
 
 
 " Comment plugin
-Plugin 'tpope/vim-commentary'
+" Plugin 'tpope/vim-commentary'
+Plugin 'tomtom/tcomment_vim'
 
 " File managers/explorers
 Plugin 'kien/ctrlp.vim'
@@ -306,6 +307,8 @@ set diffopt+=vertical       " diff mode with vertical splits please
 " ----------------------------------------------------------------------------
 " Some useful key mappings.
 " ----------------------------------------------------------------------------
+:let mapleader = "-"
+
 nnoremap ; :
 vnoremap , "s
 nnoremap , "s
@@ -317,7 +320,6 @@ vnoremap <C-r> "hy:%s/<C-r>h//gc<left><left><left>
 noremap <C-f> :Ack -Q --smart-case
 
 " Map buffer navigation
-:let mapleader = "-"
 :nmap <leader>n :enew<CR>
 :nmap <leader>h :MBEOpen<CR>:MBEFocus<CR>h
 :nmap <leader>l :MBEOpen<CR>:MBEFocus<CR>l
@@ -346,7 +348,7 @@ vnoremap <silent> <leader>a :EasyAlign<CR>
 :nmap <C-p> :CtrlP system("pwd")<CR>
 let g:ctrlp_map = ''
 let g:ctrlp_cmd = ''
-let g:ctrlp_match_window = 'bottom,order:btt,min:1,max:10,results:20'
+let g:ctrlp_match_window = 'bottom,order:btt,min:1,max:10,results:50'
 
 " Convenient key mappings for everyday use
 :nmap <leader>al :%s/\s\+$//<CR>

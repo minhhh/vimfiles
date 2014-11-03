@@ -71,9 +71,10 @@
     S'    - In visual mode, surround the selected text with quotes.
     gq    - Wrap a visual selection
 
-From plugin commentary
+From plugin tcomment_vim
 
-    \\\ - Comment line
+    <c-_><c-_> - Comment line
+    <c-_>b - Comment line
 
 Sort a list of lines
 
