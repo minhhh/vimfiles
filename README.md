@@ -19,3 +19,7 @@ Vim files for OSX, Windows and Linux
 Launch `vim` or `mvim`, run `:BundleInstall`
 
 (or `mvim +BundleInstall +qall` for CLI lovers)
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/minhhh/vimfiles/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
