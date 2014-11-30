@@ -363,6 +363,7 @@ nnoremap [[ [{
 nnoremap ]] ]}
 vnoremap [[ [{
 vnoremap ]] ]}
+:vmap <leader>!tidy -qicbn -asxhtml -config ~/.dotfiles/.tidyconfig
 
 " Map convenient mark with capital letter for it to work cross files
 nnoremap ms :BookmarkSave /tmp/vimbm<CR>
