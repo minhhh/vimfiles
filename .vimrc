@@ -97,6 +97,8 @@ Plugin 'scrooloose/syntastic'
 Plugin 'tpope/vim-fireplace'
 Plugin 'tpope/vim-leiningen'
 Plugin 'davidhalter/jedi-vim'
+Plugin 'guns/vim-clojure-static'
+Plugin 'rainbow_parentheses.vim'
 
 " Source Control plugins
 "Plugin 'tpope/vim-git'
