@@ -98,7 +98,9 @@ Plugin 'tpope/vim-fireplace'
 Plugin 'tpope/vim-leiningen'
 Plugin 'davidhalter/jedi-vim'
 Plugin 'guns/vim-clojure-static'
-Plugin 'rainbow_parentheses.vim'
+Plugin 'kien/rainbow_parentheses.vim'
+Plugin 'guns/vim-sexp'
+Plugin 'tpope/vim-sexp-mappings-for-regular-people'
 
 " Source Control plugins
 "Plugin 'tpope/vim-git'
@@ -490,6 +492,11 @@ autocmd vimenter * :silent! NERDTree
 :let g:session_autoload='no'
 :let g:session_default_to_last='yes'
 :let g:session_verbose_messages=0
+
+au VimEnter * RainbowParenthesesToggle
+au Syntax * RainbowParenthesesLoadRound
+au Syntax * RainbowParenthesesLoadSquare
+au Syntax * RainbowParenthesesLoadBraces
 
 " ----------------------------------------------------------------------------
 " Qargs: Run command on quickfix results
