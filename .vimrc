@@ -370,8 +370,8 @@ vnoremap ]] ]}
 :vmap <leader>f !tidy -qicbn -asxhtml -config ~/.dotfiles/.tidyconfig<CR><CR>
 
 " Map convenient mark with capital letter for it to work cross files
-nnoremap ms :BookmarkSave /tmp/vimbm<CR>
-nnoremap ml :silent! BookmarkLoad /tmp/vimbm<CR>
+nnoremap ms :BookmarkSave ~/.vimbm<CR>
+nnoremap ml :silent! BookmarkLoad ~/.vimbm<CR>
 
 " Disable spelling and wrapline
 au BufNewFile,BufRead,BufEnter *.* set nospell
