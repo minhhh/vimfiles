@@ -241,6 +241,14 @@ Useful tricks
     `.                            - Last modified position
     m followed by a character a-Z - Set a mark
 
+### Fold commands
+
+    zi	switch folding on or off
+    za	toggle current fold open/closed
+    zc	close current fold
+    zR	open all folds
+    zM	close all folds
+    zv	expand folds to reveal cursor
 
 ### Using help
 

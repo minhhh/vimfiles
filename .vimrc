@@ -94,13 +94,21 @@ Plugin 'tpope/vim-markdown'
 " Syntax check on buffer save
 Plugin 'scrooloose/syntastic'
 
+" Clojure
 Plugin 'tpope/vim-fireplace'
 Plugin 'tpope/vim-leiningen'
-Plugin 'davidhalter/jedi-vim'
 Plugin 'guns/vim-clojure-static'
 Plugin 'kien/rainbow_parentheses.vim'
 Plugin 'guns/vim-sexp'
 Plugin 'tpope/vim-sexp-mappings-for-regular-people'
+
+" Python
+Plugin 'ivanov/vim-ipython'
+Plugin 'tmhedberg/SimpylFold'
+" Plugin 'davidhalter/jedi-vim' " doesn't work nicely with Mutiple buffer
+
+" Javascript
+Plugin 'jelera/vim-javascript-syntax'
 
 " Source Control plugins
 "Plugin 'tpope/vim-git'
@@ -139,6 +147,8 @@ set dir=~/.vimswap//,/var/tmp//,/tmp//
 " ----------------------------------------------------------------------------
 "  tags
 " ----------------------------------------------------------------------------
+"" search first in current directory then file directory for tag file
+set tags=tags,./tags
 
 " ----------------------------------------------------------------------------
 "  displaying text
@@ -301,6 +311,7 @@ if has('folding')
 endif
 
 set foldtext=NeatFoldText()
+au FileType javascript call JavaScriptFold()
 
 " ----------------------------------------------------------------------------
 "  diff mode
