@@ -255,15 +255,13 @@ Useful tricks
     :set all - See all settings
 
 ### Others
+
     :so .vimrc - Reload .vimrc
 
 
 # TIPS
-https://twitter.com/vimtips
-
-http://www.moolenaar.net/habits.html
-
-[More instantly better Vim](http://www.youtube.com/watch?v=aHm36-na4-4)
-
-[Learn Vimscript the Hard Way](http://learnvimscriptthehardway.stevelosh.com)
+* [Vimtips](https://twitter.com/vimtips)
+* [Seven habits of effective text editing](http://www.moolenaar.net/habits.html)
+* [More instantly better Vim](http://www.youtube.com/watch?v=aHm36-na4-4)
+* [Learn Vimscript the Hard Way](http://learnvimscriptthehardway.stevelosh.com)
 

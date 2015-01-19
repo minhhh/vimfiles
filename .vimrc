@@ -33,7 +33,6 @@ Plugin 'nelstrom/vim-visual-star-search'
 " Plugin 'ZoomWin'
 " Plugin 'ervandew/supertab'
 " Plugin 'tpope/vim-endwise'
-" Plugin 'godlygeek/tabular'
 " Plugin 'HarnoRanaivo/vim-neatfoldtext'
 " Plugin 'maxbrunsfeld/vim-yankstack'
 
@@ -83,7 +82,9 @@ endif
 " Plugin 'elzr/vim-json'
 
 " Markdown plugins
-Plugin 'tpope/vim-markdown'
+" Plugin 'tpope/vim-markdown'
+Plugin 'godlygeek/tabular'
+Plugin 'plasticboy/vim-markdown'
 
 " PowerShell plugins
 " Plugin 'dougireton/vim-ps1'
@@ -523,9 +524,20 @@ function! QuickfixFilenames()
 endfunction
 
 " ----------------------------------------------------------------------------
+" Some useful abbr
+" ----------------------------------------------------------------------------
+abbr thsi this
+abbr whta what
+abbr waht what
+abbr wath what
+abbr hte the
+abbr teh the
+abbr btu but
+
+" ----------------------------------------------------------------------------
 " Allow overriding these settings
 " ----------------------------------------------------------------------------
-if filereadable(expand("~/.vim/.vimrc.local"))
-  source ~/.vim/.vimrc.local
+if filereadable(expand("~/.vimrc.local"))
+  source ~/.vimrc.local
 endif
 
