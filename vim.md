@@ -1,6 +1,6 @@
 # SHORTCUTS
 
-### Open save files
+## Open save files
 
     :wq<Return>         - Quit vi, writing out modified file to file named in original invocatioê
     :q<Return>          - Quit!(or exit) vi
@@ -11,7 +11,7 @@
     :Explore            - Open file explorer
     :r filename<Return> - Read file named filename and insert after current line
 
-### Basic Moving around
+## Basic Moving around
 
     0                                - To line beginning
     $                                - To line end
@@ -26,7 +26,7 @@
     I                                - Move to the beginning of the line and append text
     o                                - In visual mode, go to the other end of the marked area
 
-### Advanced Moving around
+## Advanced Moving around
 
     %      - Jump to matching parenthesis/bracket/brace, or language block if language module loaded
     {      - Move to the last blank line
@@ -38,14 +38,14 @@
 
     number C-^ - Go to a buffer by number
 
-### Switch between modes
+## Switch between modes
 
     C-U or Esc - Switch to normal mode
     i          - Insert text before cursor, until <Esc> hit
     a          - Append text after the cursor
     s          - Delete character under cursor and switch to insert mode
 
-### Basic Editing text
+## Basic Editing text
 
     x          - Delete single character under cursor
     C-w or db  - Delete word backward
@@ -63,7 +63,7 @@
     O          - open and put text in a new line above current line, until <Esc> hit
     J          - Join lines
 
-### Advanced Editing text
+## Advanced Editing text
 
     C-a-l - Remove trailing spaces (Custom mapping)
     C-a-b - Replace tabs by spaces (Custom mapping)
@@ -86,13 +86,13 @@ Remove lines that don't match a pattern
 
     :g!/www\.example\.com/d
 
-### Undo/Redo changes
+## Undo/Redo changes
 
     .   - Repeat the last command that modified the file.
     u   - Undo
     C-r - Redo.
 
-### Copy and paste
+## Copy and paste
 
     yy  - copy (yank, cut) the current line into the buffer
     p   - put (paste) the line(s) in the buffer into the text after the current line
@@ -100,7 +100,7 @@ Remove lines that don't match a pattern
     "ay - Yank using a register
     "ap - Paste using a register
 
-### Select
+## Select
 
     v  - Start highlighting characters. Use the normal movement keys and commands to select text for highlighting.
     gv - recontentselect last visual block
@@ -111,7 +111,7 @@ Remove lines that don't match a pattern
     << - Shifts the current line to the left by one shift width.
     >> - Shifts the current line to the right by one shift width.
 
-### Quick select
+## Quick select
 
     viw - Select inside word
     vi" - Select inside "
@@ -131,12 +131,12 @@ Remove lines that don't match a pattern
     >iB - Indent inside block
     >aB - Indent around block
 
-### Block editing
+## Block editing
 
     Select a block, then `C-V`, then `:`, then `le 3` would give a 3-space indentation.
     Select a block, then `C-V`, then `I`, then what ever you edit afterwards will be applied to the block.
 
-### Align with Vim easy align
+## Align with Vim easy align
 
 Supposed you map the trigger key to `<Enter>`
 
@@ -157,7 +157,7 @@ Supposed you map the trigger key to `<Enter>`
 
 
 
-### Search and replace
+## Search and replace
 
     /string        - search forward for occurrence of string in text
     n              - move to next occurrence of search string
@@ -167,11 +167,11 @@ Supposed you map the trigger key to `<Enter>`
     *              - Search for word under cursor bounded
     g*             - Search for word under cursor bounded
 
-### Making a list of numbers
+## Making a list of numbers
 
     :put =map(range(1,150), 'printf(''WHat%d'', v:val)')
 
-### Search for selected text
+## Search for selected text
 Select text in visual mode, then copy it with %%y%%.
 Then switch to search, and paste the copied word with %%C-R 0%%
 
@@ -183,7 +183,7 @@ Using custom command `Qargs`, we can replace accross files like so
     :Qargs
     :argdo %s/findme/replaceme/gc | update
 
-### Search for text in all files
+## Search for text in all files
 Use `:vimgrep /search_pattern/gj ./**/*.*%%`
 
 Then navigate your search result with these command
@@ -202,14 +202,14 @@ Then run `ack` on command line like this
 
     ack -Q --smart-case SEARCHTERM
 
-### Macros
+## Macros
 
     q followed by a character a-Z - Start a marcro
     q                             - Stop recording
     @@                            - Repeat last marcro
     @ followed by a character a-Z - Play a macro
 
-### Windows
+## Windows
 
     C-w s   - Split windows
     C-w v   - Split windows vertically
@@ -217,13 +217,13 @@ Then run `ack` on command line like this
     C-w c   - Close window
     C-w -   - maximise currencontentt window ^W make all windows equal size
 
-### Tabs
+## Tabs
 
     :tabn   - Next tab tab
     :tabnew - New tab
     :tabp   - Previous tab
 
-### Execute external command
+## Execute external command
 
     :! - Execute a shell. If a is specified, the program which is executed using ! uses the specified line(s) as standard input, and will replace those lines with the standard output of the program executed. "!!" executes a program using the current line as input. For example, "!4jsort" will take five lines from the current cursor position and execute sort. After typing the command, there will be a single exclamation point where you can type the command in.
     :{range}!command - Replace the selection with the output of the external command.
@@ -235,13 +235,13 @@ Useful tricks
     :{range}!sort            -  Sort with external command
     :{range}!column -t       -  Columnate a table
 
-### Marks and Bookmark
+## Marks and Bookmark
 
     ' followed by a character a-Z - Go to the line beginning of a mark
     `.                            - Last modified position
     m followed by a character a-Z - Set a mark
 
-### Fold commands
+## Fold commands
 
     zi	switch folding on or off
     za	toggle current fold open/closed
@@ -250,11 +250,11 @@ Useful tricks
     zM	close all folds
     zv	expand folds to reveal cursor
 
-### Using help
+## Using help
 
     :set all - See all settings
 
-### Others
+## Others
 
     :so .vimrc - Reload .vimrc
 
