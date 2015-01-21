@@ -12,13 +12,13 @@ Vim files for OSX, Windows and Linux
 
 2. Create symlinks to .vimrc and .gvimrc:
 
-        $ ln -s ~/.vim/vimrc ~/.vimrc
+        $ ln -s ~/.vim/.vimrc ~/.vimrc
 
 3. Install configured bundles:
 
 Launch `vim` or `mvim`, run `:BundleInstall`
 
-(or `mvim +BundleInstall +qall` for CLI lovers)
+(or `vim +BundleInstall +qall` for CLI lovers)
 
 
 [![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/minhhh/vimfiles/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
