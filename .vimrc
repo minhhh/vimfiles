@@ -83,8 +83,8 @@ endif
 
 " Markdown plugins
 " Plugin 'tpope/vim-markdown'
-Plugin 'godlygeek/tabular'
-Plugin 'plasticboy/vim-markdown'
+" Plugin 'godlygeek/tabular'
+" Plugin 'plasticboy/vim-markdown'
 
 " PowerShell plugins
 " Plugin 'dougireton/vim-ps1'
@@ -533,6 +533,11 @@ abbr wath what
 abbr hte the
 abbr teh the
 abbr btu but
+
+" ----------------------------------------------------------------------------
+" Markdown
+" ----------------------------------------------------------------------------
+autocmd BufNewFile,BufReadPost *.md set filetype=markdown
 
 " ----------------------------------------------------------------------------
 " Allow overriding these settings
