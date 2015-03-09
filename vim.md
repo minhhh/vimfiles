@@ -254,14 +254,33 @@ Useful tricks
 
     :set all - See all settings
 
+## ctags
+* Install `ctags`
+* Run this for specific folders
+```
+    ctags --languages=C,C++ --c-kinds=+px --c++-kinds=+px -R .
+```
+* Run add tags command for specific project
+```
+    :set tags+=<library_path>/tags
+    E.g.
+    :set tags+=/usr/local/include/tags
+    :set tags+=/System/Library/Frameworks/OpenGL.framework/Versions/A/Headers/tags
+```
+
+* Shortcuts
+```
+    C-] 	Go to definition
+    C-t     Go back to previous definition
+    g C-]   Choose a list of definition
+```
+
 ## Others
 
     :so .vimrc - Reload .vimrc
 
-
 # TIPS
-* [Vimtips](https://twitter.com/vimtips)
 * [Seven habits of effective text editing](http://www.moolenaar.net/habits.html)
 * [More instantly better Vim](http://www.youtube.com/watch?v=aHm36-na4-4)
 * [Learn Vimscript the Hard Way](http://learnvimscriptthehardway.stevelosh.com)
-
+* [Ctags and Taglist](http://www.thegeekstuff.com/2009/04/ctags-taglist-vi-vim-editor-as-sourece-code-browser/)

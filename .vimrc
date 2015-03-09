@@ -38,8 +38,9 @@ Plugin 'nelstrom/vim-visual-star-search'
 
 Plugin 'vim-scripts/matchit.zip'
 Plugin 'vim-scripts/closetag.vim'
-" Plugin 'vim-scripts/taglist.vim'
+Plugin 'vim-scripts/taglist.vim'
 Plugin 'MattesGroeger/vim-bookmarks'
+Plugin 'MarcWeber/vim-addon-local-vimrc'
 
 Plugin 'eiginn/netrw'
 
@@ -382,8 +383,8 @@ vnoremap ]] ]}
 :vmap <leader>f !tidy -qicbn -asxhtml -config ~/.dotfiles/.tidyconfig<CR><CR>
 
 " Map convenient mark with capital letter for it to work cross files
-nnoremap ms :BookmarkSave ~/.vimbm<CR>
-nnoremap ml :silent! BookmarkLoad ~/.vimbm<CR>
+" nnoremap ms :BookmarkSave ~/.vim-bookmarks<CR>
+" nnoremap ml :silent! BookmarkLoad ~/.vim-bookmarks<CR>
 
 " Disable spelling and wrapline
 au BufNewFile,BufRead,BufEnter *.* set nospell
@@ -538,6 +539,11 @@ abbr btu but
 " Markdown
 " ----------------------------------------------------------------------------
 autocmd BufNewFile,BufReadPost *.md set filetype=markdown
+
+" ----------------------------------------------------------------------------
+" Local vimrc
+" ----------------------------------------------------------------------------
+let g:local_vimrc = {'names':['.vimrc'],'hash_fun':'LVRHashOfFile'}
 
 " ----------------------------------------------------------------------------
 " Allow overriding these settings
