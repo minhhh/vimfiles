@@ -13,7 +13,7 @@ Plugin 'terryma/vim-multiple-cursors'
 Plugin 'xolox/vim-session'
 Plugin 'xolox/vim-misc'
 Plugin 'techlivezheng/vim-plugin-minibufexpl'
-Plugin 'vim-scripts/AutoComplPop' " comment since this seems to slow vim down
+" Plugin 'vim-scripts/AutoComplPop' " comment since this seems to slow vim down
 "for me
 Plugin 'junegunn/vim-easy-align'
 Plugin 'tpope/vim-surround'

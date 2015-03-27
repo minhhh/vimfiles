@@ -258,7 +258,7 @@ Useful tricks
 * Install `ctags`
 * Run this for specific folders
 ```
-    ctags --languages=C,C++ --c-kinds=+px --c++-kinds=+px -R .
+    ctags --languages=C,C++ --c-kinds=+px --c++-kinds=+px --extra=+fq -R .
 ```
 * Run add tags command for specific project
 ```
@@ -282,5 +282,6 @@ Useful tricks
 # TIPS
 * [Seven habits of effective text editing](http://www.moolenaar.net/habits.html)
 * [More instantly better Vim](http://www.youtube.com/watch?v=aHm36-na4-4)
-* [Learn Vimscript the Hard Way](http://learnvimscriptthehardway.stevelosh.com)
+* [Vimtips](http://rayninfo.co.uk/vimtips.html)
 * [Ctags and Taglist](http://www.thegeekstuff.com/2009/04/ctags-taglist-vi-vim-editor-as-sourece-code-browser/)
+* [Learn Vimscript the Hard Way](http://learnvimscriptthehardway.stevelosh.com)
