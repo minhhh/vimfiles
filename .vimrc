@@ -90,9 +90,6 @@ endif
 " PowerShell plugins
 " Plugin 'dougireton/vim-ps1'
 
-" Wiki
-" Plugin 'vimwiki'
-
 " Syntax check on buffer save
 Plugin 'scrooloose/syntastic'
 
@@ -105,8 +102,8 @@ Plugin 'guns/vim-sexp'
 Plugin 'tpope/vim-sexp-mappings-for-regular-people'
 
 " Python
-Plugin 'ivanov/vim-ipython'
-Plugin 'tmhedberg/SimpylFold'
+" Plugin 'ivanov/vim-ipython'
+" Plugin 'tmhedberg/SimpylFold'
 " Plugin 'davidhalter/jedi-vim' " doesn't work nicely with Mutiple buffer
 
 " Javascript
