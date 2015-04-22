@@ -41,7 +41,7 @@ Plugin 'vim-scripts/closetag.vim'
 Plugin 'vim-scripts/taglist.vim'
 Plugin 'MattesGroeger/vim-bookmarks'
 Plugin 'MarcWeber/vim-addon-local-vimrc'
-
+Plugin 'jpalardy/vim-slime'
 Plugin 'eiginn/netrw'
 
 
