@@ -147,15 +147,13 @@ Supposed you map the trigger key to `<Enter>`
     <Enter>:          Alignment around 1st colon (key: value)                     :'<,'>EasyAlign:
     <Enter><Right>:   Alignment around 1st colon (key : value)                    :'<,'>EasyAlign:s0l1
     <Enter>=          Alignment around 1st operators with =                       : '<,'>EasyAlign=
-    <Enter>2=         Alignment around 2nd operators with =: '<,'>EasyAlign2=
+    <Enter>2=         Alignment around 2nd operators with =                       : '<,'>EasyAlign2=
     <Enter>3=         Alignment around 3rd operators with =                       : '<,'>EasyAlign3=
     <Enter>*=         Alignment around all operators with =                       : '<,'>EasyAlign*=
     <Enter>**=        Left-right alternating alignment around all = operators     : '<,'>EasyAlign**=
     <Enter><Enter>=   Right alignment around 1st equals signs                     : '<,'>EasyAlign!=
     <Enter><Enter>**= Right-left alternating alignment around all = operators     : '<,'>EasyAlign!**=
     <Enter><Enter>**= align by tab                                                : '<,'>EasyAlign * /[\t]/
-
-
 
 ## Search and replace
 
@@ -230,10 +228,11 @@ Then run `ack` on command line like this
 
 Useful tricks
 
-    :r !ls                   -  Print the current directory content
-    :%!tidy -qicbn -asxhtml  -  Tidy up the whole file HTML (provided that tidy is already installed)
-    :{range}!sort            -  Sort with external command
-    :{range}!column -t       -  Columnate a table
+    :r !ls                  -  Print the current directory content
+    :%!tidy -qicbn -asxhtml -  Tidy up the whole file HTML (provided that tidy is already installed)
+    :{range}!sort           -  Sort with external command
+    :{range}!column -t      -  Columnate a table
+    :r ! wc %               - Count number of words in file
 
 ## Marks and Bookmark
 
@@ -276,8 +275,12 @@ Useful tricks
 ```
 
 ## Others
-
+* Reload `.vimrc`
+```
     :so .vimrc - Reload .vimrc
+```
+
+* Using `vim-addon-local-vimrc` to run local `.vimrc` file more securely: [vim-addon-local-vimrc](https://github.com/MarcWeber/vim-addon-local-vimrc)
 
 # TIPS
 * [Seven habits of effective text editing](http://www.moolenaar.net/habits.html)

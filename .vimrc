@@ -340,6 +340,7 @@ noremap <C-f> :Ack -Q --smart-case
 :nmap <leader>mo :MBEToggle<CR>
 :nmap <leader>mf :MBEFocus<CR>
 :nmap <leader>q :MBEbd!<CR>
+
 " Switch to previous buffer
 :nmap <leader>u :b#<CR>
 :imap <leader>h <Esc>:MBEOpen<CR>:MBEFocus<CR>h
@@ -488,8 +489,9 @@ autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
 autocmd InsertLeave * match ExtraWhitespace /\s\+$/
 autocmd BufWinLeave * call clearmatches()
 
-
+" ----------------------------------------------------------------------------
 " NerdTree settings
+" ----------------------------------------------------------------------------
 :let NERDTreeShowHidden=1
 :let NERDTreeShowBookmarks=1
 :let g:NERDTreeChDirMode=2
