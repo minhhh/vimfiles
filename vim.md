@@ -228,11 +228,12 @@ Then run `ack` on command line like this
 
 Useful tricks
 
-    :r !ls                  -  Print the current directory content
-    :%!tidy -qicbn -asxhtml -  Tidy up the whole file HTML (provided that tidy is already installed)
-    :{range}!sort           -  Sort with external command
-    :{range}!column -t      -  Columnate a table
+    :r !ls                  - Print the current directory content
+    :%!tidy -qicbn -asxhtml - Tidy up the whole file HTML (provided that tidy is already installed)
+    :{range}!sort           - Sort with external command
+    :{range}!column -t      - Columnate a table
     :r ! wc %               - Count number of words in file
+    :{range}!js-beautify -i - Beautify javascript with js-beautify
 
 ## Marks and Bookmark
 
