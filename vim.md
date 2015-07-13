@@ -200,6 +200,10 @@ Then run `ack` on command line like this
 
     ack -Q --smart-case SEARCHTERM
 
+Similarly, you can use `ag`, `ag` is just like `ack` except it's much faster
+
+    ag -Q --smart-case SEARCHTERM
+
 ## Macros
 
     q followed by a character a-Z - Start a marcro
