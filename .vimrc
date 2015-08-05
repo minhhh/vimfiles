@@ -6,7 +6,7 @@ filetype off      " Required for Vundle
 set rtp+=~/.vim/bundle/Vundle.vim  " Add vundle to the RuntimePath
 call vundle#begin()
 " Let Vundle manage Vundle. Required!
-Plugin 'gmarik/Vundle.vim'
+Plugin 'VundleVim/Vundle.vim'
 Plugin 'bling/vim-airline'
 Plugin 'scrooloose/nerdtree'
 Plugin 'terryma/vim-multiple-cursors'
@@ -381,8 +381,10 @@ vnoremap ]] ]}
 :vmap <leader>f !tidy -qicbn -asxhtml -config ~/.dotfiles/.tidyconfig<CR><CR>
 
 " Map convenient mark with capital letter for it to work cross files
-" nnoremap ms :BookmarkSave ~/.vim-bookmarks<CR>
-" nnoremap ml :silent! BookmarkLoad ~/.vim-bookmarks<CR>
+let g:bookmark_auto_save = 1
+let g:bookmark_highlight_lines = 1
+let g:bookmark_auto_save_file = $HOME.'/.vim-bookmarks'
+nnoremap ml :silent! BookmarkLoad<CR>
 
 " Disable spelling and wrapline
 au BufNewFile,BufRead,BufEnter *.* set nospell
@@ -496,6 +498,28 @@ autocmd BufWinLeave * call clearmatches()
 :let NERDTreeShowBookmarks=1
 :let g:NERDTreeChDirMode=2
 autocmd vimenter * :silent! NERDTree
+
+let g:bookmark_no_default_key_mappings = 1
+function! BookmarkMapKeys()
+    nmap mm :BookmarkToggle<CR>
+    nmap mi :BookmarkAnnotate<CR>
+    nmap mn :BookmarkNext<CR>
+    nmap mp :BookmarkPrev<CR>
+    nmap ma :BookmarkShowAll<CR>
+    nmap mc :BookmarkClear<CR>
+    nmap mx :BookmarkClearAll<CR>
+endfunction
+function! BookmarkUnmapKeys()
+    unmap mm
+    unmap mi
+    unmap mn
+    unmap mp
+    unmap ma
+    unmap mc
+    unmap mx
+endfunction
+autocmd BufEnter * :call BookmarkMapKeys()
+autocmd BufEnter NERD_tree_* :call BookmarkUnmapKeys()
 
 " ----------------------------------------------------------------------------
 " Session stuff
