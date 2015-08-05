@@ -381,10 +381,9 @@ vnoremap ]] ]}
 :vmap <leader>f !tidy -qicbn -asxhtml -config ~/.dotfiles/.tidyconfig<CR><CR>
 
 " Map convenient mark with capital letter for it to work cross files
-let g:bookmark_auto_save = 1
 let g:bookmark_highlight_lines = 1
-let g:bookmark_auto_save_file = $HOME.'/.vim-bookmarks'
-nnoremap ml :silent! BookmarkLoad<CR>
+nnoremap ms :silent! BookmarkSave /tmp/.vim-bookmarks<CR>
+nnoremap ml :silent! BookmarkLoad /tmp/.vim-bookmarks<CR>
 
 " Disable spelling and wrapline
 au BufNewFile,BufRead,BufEnter *.* set nospell
