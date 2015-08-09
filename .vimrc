@@ -337,15 +337,13 @@ vnoremap <C-r> "hy:%s/<C-r>h//gc<left><left><left>
 :nmap <leader>n :enew<CR>
 :nmap <leader>h :MBEOpen<CR>:MBEFocus<CR>h
 :nmap <leader>l :MBEOpen<CR>:MBEFocus<CR>l
-:nmap <leader>mo :MBEToggle<CR>
-:nmap <leader>mf :MBEFocus<CR>
 :nmap <leader>q :MBEbd!<CR>
 
 " Switch to previous buffer
 :nmap <leader>u :b#<CR>
+:imap <leader>u <Esc>:b#<CR>
 :imap <leader>h <Esc>:MBEOpen<CR>:MBEFocus<CR>h
 :imap <leader>q <Esc>:MBEbd!<CR>
-:imap <leader>u <Esc>:b#<CR>
 
 " Map syntastic
 :nmap <leader>b :SyntasticCheck<CR>:Errors<CR>
