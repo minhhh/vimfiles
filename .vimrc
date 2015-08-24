@@ -43,7 +43,7 @@ Plugin 'MattesGroeger/vim-bookmarks'
 Plugin 'MarcWeber/vim-addon-local-vimrc'
 Plugin 'jpalardy/vim-slime'
 Plugin 'eiginn/netrw'
-Plugin 'vim-scripts/DrawIt'
+" Plugin 'vim-scripts/DrawIt'
 
 
 " Comment plugin
