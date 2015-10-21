@@ -182,16 +182,7 @@ Using custom command `Qargs`, we can replace accross files like so
     :argdo %s/findme/replaceme/gc | update
 
 ## Search for text in all files
-Use `:vimgrep /search_pattern/gj ./**/*.*%%`
-
-Then navigate your search result with these command
-
-    :cw       - Open the quickfix window
-    :cn       - Go to next result
-    :cp       - Go to the previous result
-    C-W Enter - Open the search in new window
-
-Another faster way is to use `ack`. First install `ack` using your favorite package manager
+Use `ack`. First install `ack` using your favorite package manager
 
     # on Mac
     brew install ack
@@ -203,6 +194,14 @@ Then run `ack` on command line like this
 Similarly, you can use `ag`, `ag` is just like `ack` except it's much faster
 
     ag -Q --smart-case SEARCHTERM
+
+Or you can use `:vimgrep /search_pattern/gj ./**/*.*%%`, but it would be very slow. Then navigate your search result with these command
+
+    :cw       - Open the quickfix window
+    :cn       - Go to next result
+    :cp       - Go to the previous result
+    C-W Enter - Open the search in new window
+
 
 ## Macros
 
