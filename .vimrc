@@ -62,7 +62,7 @@ if executable('ag')
 endif
 
 " Plugin 'mhinz/vim-startify'
-Plugin 'chrisbra/Recover.vim'
+" Plugin 'chrisbra/Recover.vim'
 
 " Tmux plugins
 if executable('tmux')
@@ -351,7 +351,7 @@ vnoremap <C-r> "hy:%s/<C-r>h//gc<left><left><left>
 
 " Map session stuff
 :nmap <leader>ss :silent! NERDTreeClose<CR>:silent! MBEClose<CR>:SaveSession!<CR>:silent! NERDTree<CR>:silent! MBEOpen<CR>:silent! wincmd l<CR>
-:nmap <leader>sl :silent! NERDTreeClose<CR>:silent! MBEClose<CR>:silent! OpenSession<CR>:silent! NERDTree<CR>:silent! MBEOpen<CR>:wincmd l<CR> " Fix the issue with MBE, reopen NerdTree too
+:nmap <leader>sl :silent! NERDTreeClose<CR>:silent! MBEClose<CR>:silent! OpenSession<CR>:silent! NERDTree<CR>:silent! MBEOpen<CR>:wincmd l<CR>
 :nmap <leader>sr :silent! MRU<CR>
 
 " Easyalign
