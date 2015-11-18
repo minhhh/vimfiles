@@ -320,6 +320,7 @@ set diffopt+=vertical       " diff mode with vertical splits please
 
 " ----------------------------------------------------------------------------
 " Some useful key mappings.
+" :Error
 " ----------------------------------------------------------------------------
 :let mapleader = "-"
 
@@ -381,7 +382,7 @@ vnoremap ]] ]}
 " Map convenient mark with capital letter for it to work cross files
 let g:bookmark_highlight_lines = 1
 nnoremap ms :silent! BookmarkSave /tmp/.vim-bookmarks<CR>
-nnoremap ml :silent! BookmarkLoad /tmp/.vim-bookmarks<CR>
+nnoremap ml :silent! BookmarkLoad /tmp/.vim-bookmarks<CR><CR>
 
 " Disable spelling and wrapline
 au BufNewFile,BufRead,BufEnter *.* set nospell
