@@ -133,6 +133,12 @@ endif
 " load the man plugin for a nice man viewer
 runtime! ftplugin/man.vim
 
+" fix crontab: temp file must be edited in place
+if $VIM_CRONTAB == "true"
+    set nobackup
+    set nowritebackup
+endif
+
 " ----------------------------------------------------------------------------
 "  moving around, searching and patterns
 " ----------------------------------------------------------------------------
