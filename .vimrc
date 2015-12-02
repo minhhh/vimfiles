@@ -205,22 +205,9 @@ set switchbuf=usetab  " Jump to the 1st open window which contains
                       " TODO: Add 'split' if you want to split the
                       " current window for a quickfix error window.
 
-" set statusline=
-" set statusline+=b%-1.3n\ >                    " buffer number
-" set statusline+=\ %{fugitive#statusline()}:
-" set statusline+=\ %F
-" set statusline+=\ %M
-" set statusline+=%R
-" set statusline+=%#warningmsg#
-" set statusline+=%{SyntasticStatuslineFlag()}
-" set statusline+=%*
-" set statusline+=%=
-" set statusline+=\ %Y
-" set statusline+=\ <\ %{&fenc}
-" set statusline+=\ <\ %{&ff}
-" set statusline+=\ <\ %p%%
-" set statusline+=\ %l:
-" set statusline+=%02.3c    " cursor line/total lines
+let g:lightline = {
+      \ 'colorscheme': 'solarized',
+      \ }
 
 set helpheight=30         " Set window height when opening Vim help windows
 
