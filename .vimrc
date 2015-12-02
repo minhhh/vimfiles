@@ -7,7 +7,7 @@ set rtp+=~/.vim/bundle/Vundle.vim  " Add vundle to the RuntimePath
 call vundle#begin()
 " Let Vundle manage Vundle. Required!
 Plugin 'VundleVim/Vundle.vim'
-Plugin 'bling/vim-airline'
+Plugin 'itchyny/lightline.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'xolox/vim-session'
