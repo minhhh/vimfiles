@@ -212,7 +212,7 @@ let g:lightline = {
       \ }
       \ }
 function! LightLineFilename()
-  return expand('%:p:h')
+  return expand('%')
 endfunction
 
 set helpheight=30         " Set window height when opening Vim help windows
