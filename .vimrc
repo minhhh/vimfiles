@@ -23,7 +23,7 @@ Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'tomtom/tlib_vim'
 Plugin 'garbas/vim-snipmate'
 Plugin 'minhhh/vim-snippets'
-Plugin 'michalliu/sourcebeautify.vim'
+" Plugin 'michalliu/sourcebeautify.vim'
 
 " Various editing plugins
 " Plugin 'kana/vim-textobj-user'
@@ -207,7 +207,13 @@ set switchbuf=usetab  " Jump to the 1st open window which contains
 
 let g:lightline = {
       \ 'colorscheme': 'solarized',
+      \ 'component_function': {
+      \   'filename': 'LightLineFilename'
       \ }
+      \ }
+function! LightLineFilename()
+  return expand('%:p:h')
+endfunction
 
 set helpheight=30         " Set window height when opening Vim help windows
 
