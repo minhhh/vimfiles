@@ -110,7 +110,7 @@ Plugin 'tpope/vim-sexp-mappings-for-regular-people'
 Plugin 'jelera/vim-javascript-syntax'
 
 " Plugin 'OmniSharp/omnisharp-vim'
-Plugin 'tpope/vim-dispatch'
+" Plugin 'tpope/vim-dispatch'
 " Plugin 'Valloric/YouCompleteMe'
 
 " Source Control plugins
@@ -551,13 +551,7 @@ endfunction
 " ----------------------------------------------------------------------------
 " Some useful abbr
 " ----------------------------------------------------------------------------
-abbr thsi this
-abbr whta what
-abbr waht what
-abbr wath what
-abbr hte the
-abbr teh the
-abbr btu but
+source ~/.vim/.vimrc.abbr
 
 " ----------------------------------------------------------------------------
 " Markdown
