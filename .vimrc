@@ -109,9 +109,8 @@ Plugin 'tpope/vim-sexp-mappings-for-regular-people'
 " Javascript
 Plugin 'jelera/vim-javascript-syntax'
 
-" Plugin 'OmniSharp/omnisharp-vim'
-" Plugin 'tpope/vim-dispatch'
-" Plugin 'Valloric/YouCompleteMe'
+Plugin 'OmniSharp/omnisharp-vim'
+Plugin 'tpope/vim-dispatch'
 
 " Source Control plugins
 "Plugin 'tpope/vim-git'
