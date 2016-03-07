@@ -2,8 +2,7 @@
 "  Vundle setup
 " ----------------------------------------------------------------------------
 filetype off      " Required for Vundle
-asd:B
-fsdf
+
 set rtp+=~/.vim/bundle/Vundle.vim  " Add vundle to the RuntimePath
 call vundle#begin()
 " Let Vundle manage Vundle. Required!
