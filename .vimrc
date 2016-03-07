@@ -7,14 +7,16 @@ set rtp+=~/.vim/bundle/Vundle.vim  " Add vundle to the RuntimePath
 call vundle#begin()
 " Let Vundle manage Vundle. Required!
 Plugin 'VundleVim/Vundle.vim'
-Plugin 'itchyny/lightline.vim'
+" Plugin 'itchyny/lightline.vim'
+Plugin 'vim-airline/vim-airline-themes'
+Plugin 'vim-airline/vim-airline'
 Plugin 'scrooloose/nerdtree'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'xolox/vim-session'
 Plugin 'xolox/vim-misc'
-Plugin 'techlivezheng/vim-plugin-minibufexpl'
-" Plugin 'vim-scripts/AutoComplPop' " comment since this seems to slow vim down
-"for me
+" Plugin 'techlivezheng/vim-plugin-minibufexpl'
+Plugin 'zefei/vim-wintabs'
+" Plugin 'Shougo/neocomplcache.vim'
 Plugin 'junegunn/vim-easy-align'
 Plugin 'tpope/vim-surround'
 Plugin 'jiangmiao/auto-pairs'
@@ -31,7 +33,7 @@ Plugin 'panozzaj/vim-autocorrect'
 " Plugin 'tpope/vim-unimpaired'
 Plugin 'bronson/vim-visual-star-search'
 " Plugin 'ZoomWin'
-" Plugin 'ervandew/supertab'
+Plugin 'ervandew/supertab'
 " Plugin 'tpope/vim-endwise'
 " Plugin 'HarnoRanaivo/vim-neatfoldtext'
 " Plugin 'maxbrunsfeld/vim-yankstack'
@@ -214,9 +216,14 @@ let g:lightline = {
       \   'filename': 'LightLineFilename'
       \ }
       \ }
+
 function! LightLineFilename()
   return expand('%')
 endfunction
+
+let g:airline#extensions#tagbar#enabled = 0
+let g:airline#extensions#tabline#enabled = 0
+let g:airline_theme='tomorrow'
 
 set helpheight=30         " Set window height when opening Vim help windows
 
@@ -337,16 +344,30 @@ vnoremap <F3> :w !pbcopy<CR><CR><Esc>
 vnoremap <C-r> "hy:%s/<C-r>h//gc<left><left><left>
 
 " Map buffer navigation
-:nmap <leader>n :enew<CR>
-:nmap <leader>h :MBEOpen<CR>:MBEFocus<CR>h
-:nmap <leader>l :MBEOpen<CR>:MBEFocus<CR>l
-:nmap <leader>q :MBEbd!<CR>
+" :nmap <leader>n :enew<CR>
+" :nmap <leader>h :bnext<CR>
+" :nmap <leader>l :bprevious<CR>
+" :nmap <leader>q :bd<CR>
 
 " Switch to previous buffer
+" :nmap <leader>u :b#<CR>
+" :imap <leader>h :bnext<CR>
+" :imap <leader>l :bprevious<CR>
+" :imap <leader>q :bd<CR>
+
+map <C-H> <Plug>(wintabs_previous)
+map <C-L> <Plug>(wintabs_next)
 :nmap <leader>u :b#<CR>
-:imap <leader>u <Esc>:b#<CR>
-:imap <leader>h <Esc>:MBEOpen<CR>:MBEFocus<CR>h
-:imap <leader>q <Esc>:MBEbd!<CR>
+nmap <leader>g1 :WintabsGo 1<CR>
+nmap <leader>g2 :WintabsGo 2<CR>
+nmap <leader>g3 :WintabsGo 3<CR>
+nmap <leader>g4 :WintabsGo 4<CR>
+nmap <leader>g5 :WintabsGo 5<CR>
+nmap <leader>g6 :WintabsGo 6<CR>
+nmap <leader>g7 :WintabsGo 7<CR>
+nmap <leader>g8 :WintabsGo 8<CR>
+nmap <leader>g9 :WintabsGo 9<CR>
+map <leader>q :WintabsClose<CR>
 
 " Map syntastic
 :nmap <leader>b :SyntasticCheck<CR>:Errors<CR>
@@ -577,10 +598,10 @@ let g:OmniSharp_timeout = 1
 set noshowmatch
 
 "Super tab settings - uncomment the next 4 lines
-"let g:SuperTabDefaultCompletionType = 'context'
-"let g:SuperTabContextDefaultCompletionType = "<c-x><c-o>"
-"let g:SuperTabDefaultCompletionTypeDiscovery = ["&omnifunc:<c-x><c-o>","&completefunc:<c-x><c-n>"]
-"let g:SuperTabClosePreviewOnPopupClose = 1
+let g:SuperTabDefaultCompletionType = 'context'
+let g:SuperTabContextDefaultCompletionType = "<c-x><c-o>"
+let g:SuperTabDefaultCompletionTypeDiscovery = ["&omnifunc:<c-x><c-o>","&completefunc:<c-x><c-n>"]
+let g:SuperTabClosePreviewOnPopupClose = 1
 
 "don't autoselect first item in omnicomplete, show if only one item (for preview)
 "remove preview if you don't want to see any documentation whatsoever.
@@ -589,7 +610,7 @@ set completeopt=longest,menuone,preview
 " There is a performance penalty with this (especially on Mono)
 " By default, only Type/Method signatures are fetched. Full documentation can still be fetched when
 " you need it with the :OmniSharpDocumentation command.
-" let g:omnicomplete_fetch_documentation=1
+let g:omnicomplete_fetch_documentation=1
 
 "Move the preview window (code documentation) to the bottom of the screen, so it doesn't move the code!
 "You might also want to look at the echodoc plugin
@@ -669,7 +690,6 @@ nnoremap <leader>sp :OmniSharpStopServer<cr>
 nnoremap <leader>th :OmniSharpHighlightTypes<cr>
 "Don't ask to save when changing buffers (i.e. when jumping to a type definition)
 set hidden
-
 
 " ----------------------------------------------------------------------------
 " Local vimrc

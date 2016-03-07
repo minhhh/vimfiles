@@ -287,6 +287,7 @@ Useful tricks
 * Using `vim-addon-local-vimrc` to run local `.vimrc` file more securely: [vim-addon-local-vimrc](https://github.com/MarcWeber/vim-addon-local-vimrc)
 
 # TIPS
+* [Vim Tab Madness. Buffers vs Tabs](http://joshldavis.com/2014/04/05/vim-tab-madness-buffers-vs-tabs/)
 * [Seven habits of effective text editing](http://www.moolenaar.net/habits.html)
 * [More instantly better Vim](http://www.youtube.com/watch?v=aHm36-na4-4)
 * [Vimtips](http://rayninfo.co.uk/vimtips.html)
