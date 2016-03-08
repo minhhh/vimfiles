@@ -33,7 +33,7 @@ Plugin 'panozzaj/vim-autocorrect'
 " Plugin 'tpope/vim-unimpaired'
 Plugin 'bronson/vim-visual-star-search'
 " Plugin 'ZoomWin'
-Plugin 'ervandew/supertab'
+" Plugin 'ervandew/supertab'
 " Plugin 'tpope/vim-endwise'
 " Plugin 'HarnoRanaivo/vim-neatfoldtext'
 " Plugin 'maxbrunsfeld/vim-yankstack'
@@ -221,8 +221,9 @@ function! LightLineFilename()
   return expand('%')
 endfunction
 
-let g:airline#extensions#tagbar#enabled = 0
-let g:airline#extensions#tabline#enabled = 0
+let g:airline_extensions = []
+" let g:airline#extensions#tagbar#enabled = 0
+" let g:airline#extensions#tabline#enabled = 0
 let g:airline_theme='tomorrow'
 
 set helpheight=30         " Set window height when opening Vim help windows
@@ -598,10 +599,10 @@ let g:OmniSharp_timeout = 1
 set noshowmatch
 
 "Super tab settings - uncomment the next 4 lines
-let g:SuperTabDefaultCompletionType = 'context'
-let g:SuperTabContextDefaultCompletionType = "<c-x><c-o>"
-let g:SuperTabDefaultCompletionTypeDiscovery = ["&omnifunc:<c-x><c-o>","&completefunc:<c-x><c-n>"]
-let g:SuperTabClosePreviewOnPopupClose = 1
+" let g:SuperTabDefaultCompletionType = 'context'
+" let g:SuperTabContextDefaultCompletionType = "<c-x><c-o>"
+" let g:SuperTabDefaultCompletionTypeDiscovery = ["&omnifunc:<c-x><c-o>","&completefunc:<c-x><c-n>"]
+" let g:SuperTabClosePreviewOnPopupClose = 1
 
 "don't autoselect first item in omnicomplete, show if only one item (for preview)
 "remove preview if you don't want to see any documentation whatsoever.
