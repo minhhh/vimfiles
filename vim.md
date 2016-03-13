@@ -279,7 +279,7 @@ Useful tricks
 ```
 
 ## Omnisharp vim
-* In theory, Omnisharp vim should follow the code format options defined in `/bundle/omnisharp-vim/server/OmniSharp/config.json`. However, it doesn't work for some reason. So I have to change the code of `./bundle/omnisharp-vim/server/NRefactory/ICSharpCode.NRefactory.CSharp/Formatter/FormattingOptionsFactory.cs` and hardcode the format style I want, then rebuild omnisharp server by running `xbuild` inside `bundle/omnisharp-vim/server`
+* Change NRefactory config file at `bundle/omnisharp-vim/server/Omnisharp/bin/Debug/config.json`
 
 ## Others
 * Reload `.vimrc`
