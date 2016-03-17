@@ -637,7 +637,7 @@ augroup omnisharp_commands
     autocmd BufWritePost *.cs call OmniSharp#AddToProject()
 
     "show type information automatically when the cursor stops moving
-    autocmd CursorHold *.cs call OmniSharp#TypeLookupWithoutDocumentation()
+    " autocmd CursorHold *.cs call OmniSharp#TypeLookupWithoutDocumentation()
 
     "The following commands are contextual, based on the current cursor position.
 
@@ -647,11 +647,11 @@ augroup omnisharp_commands
     " autocmd FileType cs nnoremap <leader>oft :OmniSharpFindType<cr>
     " autocmd FileType cs nnoremap <leader>ofs :OmniSharpFindSymbol<cr>
     "finds members in the current buffer
-    autocmd FileType cs nnoremap <leader>fm :OmniSharpFindMembers<cr>
+    " autocmd FileType cs nnoremap <leader>fm :OmniSharpFindMembers<cr>
     " cursor can be anywhere on the line containing an issue
-    autocmd FileType cs nnoremap <leader>x  :OmniSharpFixIssue<cr>
-    autocmd FileType cs nnoremap <leader>fx :OmniSharpFixUsings<cr>
-    autocmd FileType cs nnoremap <leader>tt :OmniSharpTypeLookup<cr>
+    autocmd FileType cs nnoremap <leader>ox  :OmniSharpFixIssue<cr>
+    autocmd FileType cs nnoremap <leader>ou :OmniSharpFixUsings<cr>
+    " autocmd FileType cs nnoremap <leader>tt :OmniSharpTypeLookup<cr>
     autocmd FileType cs nnoremap <leader>od :OmniSharpDocumentation<cr>
     "navigate up by method/property/field
     " autocmd FileType cs nnoremap <C-K> :OmniSharpNavigateUp<cr>
@@ -667,9 +667,9 @@ augroup END
 set cmdheight=2
 
 " Contextual code actions (requires CtrlP or unite.vim)
-nnoremap <leader><space> :OmniSharpGetCodeActions<cr>
+" nnoremap <leader><space> :OmniSharpGetCodeActions<cr>
 " Run code actions with text selected in visual mode to extract method
-vnoremap <leader><space> :call OmniSharp#GetCodeActions('visual')<cr>
+" vnoremap <leader><space> :call OmniSharp#GetCodeActions('visual')<cr>
 
 " rename with dialog
 nnoremap <leader>or :OmniSharpRename<cr>
@@ -677,14 +677,14 @@ nnoremap <leader>or :OmniSharpRename<cr>
 command! -nargs=1 Rename :call OmniSharp#RenameTo("<args>")
 
 " Force OmniSharp to reload the solution. Useful when switching branches etc.
-nnoremap <leader>rl :OmniSharpReloadSolution<cr>
+nnoremap <leader>ol :OmniSharpReloadSolution<cr>
 nnoremap <leader>oc :OmniSharpCodeFormat<cr>
 " Load the current .cs file to the nearest project
-nnoremap <leader>tp :OmniSharpAddToProject<cr>
+nnoremap <leader>otp :OmniSharpAddToProject<cr>
 
 " (Experimental - uses vim-dispatch or vimproc plugin) - Start the omnisharp server for the current solution
-nnoremap <leader>ss :OmniSharpStartServer<cr>
-nnoremap <leader>sp :OmniSharpStopServer<cr>
+nnoremap <leader>oss :OmniSharpStartServer<cr>
+nnoremap <leader>osp :OmniSharpStopServer<cr>
 
 " Add syntax highlighting for types and interfaces
 " nnoremap <leader>th :OmniSharpHighlightTypes<cr>
