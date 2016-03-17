@@ -345,13 +345,12 @@ vnoremap <F3> :w !pbcopy<CR><CR><Esc>
 vnoremap <C-r> "hy:%s/<C-r>h//gc<left><left><left>
 
 " Map buffer navigation
-" :nmap <leader>n :enew<CR>
+:nmap <leader>n :enew<CR>
 " :nmap <leader>h :bnext<CR>
 " :nmap <leader>l :bprevious<CR>
 " :nmap <leader>q :bd<CR>
 
 " Switch to previous buffer
-" :nmap <leader>u :b#<CR>
 " :imap <leader>h :bnext<CR>
 " :imap <leader>l :bprevious<CR>
 " :imap <leader>q :bd<CR>
