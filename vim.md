@@ -133,8 +133,8 @@ Remove lines that don't match a pattern
 
 ## Block editing
 
-    Select a block, then `C-V`, then `:`, then `le 3` would give a 3-space indentation.
-    Select a block, then `C-V`, then `I`, then what ever you edit afterwards will be applied to the block.
+    Select a block, then `C-v`, then `:`, then `le 3` would give a 3-space indentation.
+    Select a block, then `C-v`, then `I`, then what ever you edit afterwards will be applied to the block.
 
 ## Align with Vim easy align
 

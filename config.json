@@ -92,7 +92,7 @@
     "indentPreprocessorDirectives": true,
     "indentPropertyBody": true,
     "indentStructBody": true,
-    "indentSwitchBody": true,
+    "indentSwitchBody": false,
     "indexerArgumentWrapping": 0,
     "indexerClosingBracketOnNewLine": 0,
     "indexerDeclarationClosingBracketOnNewLine": 0,
