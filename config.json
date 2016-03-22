@@ -173,7 +173,7 @@
     "spaceBeforeLockParentheses": true,
     "spaceBeforeMethodCallParameterComma": false,
     "spaceBeforeMethodCallParentheses": true,
-    "spaceBeforeMethodDeclarationParameterComma": true,
+    "spaceBeforeMethodDeclarationParameterComma": false,
     "spaceBeforeMethodDeclarationParentheses": true,
     "spaceBeforeNewParameterComma": false,
     "spaceBeforeNewParentheses": true,
