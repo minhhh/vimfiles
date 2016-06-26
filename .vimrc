@@ -358,15 +358,15 @@ vnoremap <C-r> "hy:%s/<C-r>h//gc<left><left><left>
 map <C-H> <Plug>(wintabs_previous)
 map <C-L> <Plug>(wintabs_next)
 :nmap <leader>u :b#<CR>
-nmap <leader>g1 :WintabsGo 1<CR>
-nmap <leader>g2 :WintabsGo 2<CR>
-nmap <leader>g3 :WintabsGo 3<CR>
-nmap <leader>g4 :WintabsGo 4<CR>
-nmap <leader>g5 :WintabsGo 5<CR>
-nmap <leader>g6 :WintabsGo 6<CR>
-nmap <leader>g7 :WintabsGo 7<CR>
-nmap <leader>g8 :WintabsGo 8<CR>
-nmap <leader>g9 :WintabsGo 9<CR>
+nmap <leader>1 :WintabsGo 1<CR>
+nmap <leader>2 :WintabsGo 2<CR>
+nmap <leader>3 :WintabsGo 3<CR>
+nmap <leader>4 :WintabsGo 4<CR>
+nmap <leader>5 :WintabsGo 5<CR>
+nmap <leader>6 :WintabsGo 6<CR>
+nmap <leader>7 :WintabsGo 7<CR>
+nmap <leader>8 :WintabsGo 8<CR>
+nmap <leader>9 :WintabsGo 9<CR>
 map <leader>q :Bclose!<CR>
 
 " Map syntastic
