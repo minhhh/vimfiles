@@ -99,7 +99,6 @@ Plugin 'scrooloose/syntastic'
 Plugin 'tpope/vim-fireplace'
 Plugin 'tpope/vim-leiningen'
 Plugin 'guns/vim-clojure-static'
-Plugin 'kien/rainbow_parentheses.vim'
 Plugin 'guns/vim-sexp'
 Plugin 'tpope/vim-sexp-mappings-for-regular-people'
 
@@ -563,11 +562,6 @@ autocmd vimenter * :silent! NERDTree
 :let g:session_autoload='no'
 :let g:session_default_to_last='yes'
 :let g:session_verbose_messages=0
-
-au VimEnter * RainbowParenthesesToggle
-au Syntax * RainbowParenthesesLoadRound
-au Syntax * RainbowParenthesesLoadSquare
-au Syntax * RainbowParenthesesLoadBraces
 
 " ----------------------------------------------------------------------------
 " Qargs: Run command on quickfix results
