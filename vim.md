@@ -289,6 +289,19 @@ Useful tricks
 
 * Using `vim-addon-local-vimrc` to run local `.vimrc` file more securely: [vim-addon-local-vimrc](https://github.com/MarcWeber/vim-addon-local-vimrc)
 
+## Find out which plugins are making Vim slow
+
+```
+    :profile start profile.log
+    :profile func *
+    :profile file *
+    " At this point do slow actions
+    :profile pause
+    :noautocmd qall!
+```
+
+* [How to see which plugins are making Vim slow?](http://stackoverflow.com/questions/12213597/how-to-see-which-plugins-are-making-vim-slow)
+
 # TIPS
 * [Vim Tab Madness. Buffers vs Tabs](http://joshldavis.com/2014/04/05/vim-tab-madness-buffers-vs-tabs/)
 * [Seven habits of effective text editing](http://www.moolenaar.net/habits.html)

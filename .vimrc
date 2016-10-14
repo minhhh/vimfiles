@@ -25,7 +25,6 @@ Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'tomtom/tlib_vim'
 Plugin 'garbas/vim-snipmate'
 Plugin 'minhhh/vim-snippets'
-Plugin 'panozzaj/vim-autocorrect'
 
 " Various editing plugins
 " Plugin 'kana/vim-textobj-user'
