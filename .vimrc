@@ -14,8 +14,8 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'xolox/vim-session'
 Plugin 'xolox/vim-misc'
-" Plugin 'techlivezheng/vim-plugin-minibufexpl'
-Plugin 'zefei/vim-wintabs'
+Plugin 'brailsmt/vim-plugin-minibufexpl'
+" Plugin 'zefei/vim-wintabs'
 " Plugin 'Shougo/neocomplcache.vim'
 Plugin 'junegunn/vim-easy-align'
 Plugin 'tpope/vim-surround'
@@ -344,27 +344,30 @@ vnoremap <C-r> "hy:%s/<C-r>h//gc<left><left><left>
 
 " Map buffer navigation
 :nmap <leader>n :enew<CR>
-" :nmap <leader>h :bnext<CR>
-" :nmap <leader>l :bprevious<CR>
-" :nmap <leader>q :bd<CR>
+:nmap <leader>u :b#<CR>
+:nmap <leader>h :MBEOpen<CR>:MBEFocus<CR>h
+:nmap <leader>l :MBEOpen<CR>:MBEFocus<CR>l
+:nmap <C-H> :MBEOpen<CR>:MBEFocus<CR>h<CR>
+:nmap <C-L> :MBEOpen<CR>:MBEFocus<CR>l<CR>
+:nmap <leader>q :MBEbd!<CR>
 
 " Switch to previous buffer
-" :imap <leader>h :bnext<CR>
-" :imap <leader>l :bprevious<CR>
-" :imap <leader>q :bd<CR>
+:imap <leader>h <Esc>:MBEOpen<CR>:MBEFocus<CR>h
+:imap <leader>l <Esc>:MBEOpen<CR>:MBEFocus<CR>l
+:imap <leader>q <Esc>:MBEbd!<CR>
+let g:miniBufExplBRSplit = 0
 
-map <C-H> <Plug>(wintabs_previous)
-map <C-L> <Plug>(wintabs_next)
-:nmap <leader>u :b#<CR>
-nmap <leader>1 :WintabsGo 1<CR>
-nmap <leader>2 :WintabsGo 2<CR>
-nmap <leader>3 :WintabsGo 3<CR>
-nmap <leader>4 :WintabsGo 4<CR>
-nmap <leader>5 :WintabsGo 5<CR>
-nmap <leader>6 :WintabsGo 6<CR>
-nmap <leader>7 :WintabsGo 7<CR>
-nmap <leader>8 :WintabsGo 8<CR>
-nmap <leader>9 :WintabsGo 9<CR>
+" map <C-H> <Plug>(wintabs_previous)
+" map <C-L> <Plug>(wintabs_next)
+" nmap <leader>1 :WintabsGo 1<CR>
+" nmap <leader>2 :WintabsGo 2<CR>
+" nmap <leader>3 :WintabsGo 3<CR>
+" nmap <leader>4 :WintabsGo 4<CR>
+" nmap <leader>5 :WintabsGo 5<CR>
+" nmap <leader>6 :WintabsGo 6<CR>
+" nmap <leader>7 :WintabsGo 7<CR>
+" nmap <leader>8 :WintabsGo 8<CR>
+" nmap <leader>9 :WintabsGo 9<CR>
 map <leader>q :Bclose!<CR>
 
 " Map syntastic
@@ -372,9 +375,9 @@ map <leader>q :Bclose!<CR>
 :nmap <leader>c :silent! cclose<CR>:lclose<CR>
 
 " Map session stuff
-:nmap <leader>ss :silent! NERDTreeClose<CR>:silent! MBEClose<CR>:SaveSession!<CR>:silent! NERDTree<CR>:silent! MBEOpen<CR>:silent! wincmd l<CR>
-:nmap <leader>sl :silent! NERDTreeClose<CR>:silent! MBEClose<CR>:silent! OpenSession<CR>:silent! NERDTree<CR>:silent! MBEOpen<CR>:wincmd l<CR>
-:nmap <leader>sr :silent! MRU<CR>
+" :nmap <leader>ss :silent! NERDTreeClose<CR>:silent! MBEClose<CR>:SaveSession!<CR>:silent! NERDTree<CR>:silent! MBEOpen<CR>:silent! wincmd l<CR>
+" :nmap <leader>sl :silent! NERDTreeClose<CR>:silent! MBEClose<CR>:silent! OpenSession<CR>:silent! NERDTree<CR>:silent! MBEOpen<CR>:wincmd l<CR>
+" :nmap <leader>sr :silent! MRU<CR>
 
 " Easyalign
 vnoremap <silent> <leader>a :EasyAlign<CR>
