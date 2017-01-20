@@ -52,7 +52,8 @@ Plugin 'eiginn/netrw'
 Plugin 'tomtom/tcomment_vim'
 
 " File managers/explorers
-Plugin 'kien/ctrlp.vim'
+" Plugin 'kien/ctrlp.vim'
+Plugin 'wincent/command-t'
 
 if executable('ack')
   Plugin 'mileszs/ack.vim'
@@ -383,24 +384,26 @@ map <leader>q :Bclose!<CR>
 vnoremap <silent> <leader>a :EasyAlign<CR>
 
 " CommandP
-:nmap <C-p> :CtrlP system("pwd")<CR>
-let g:ctrlp_map = ''
-let g:ctrlp_cmd = ''
-let g:ctrlp_match_window = 'bottom,order:btt,min:1,max:10,results:50'
-" The Silver Searcher
-if executable('ag')
-  " Use ag over grep
-  set grepprg=ag\ --nogroup\ --nocolor
+" :nmap <C-p> :CtrlP system("pwd")<CR>
+" let g:ctrlp_map = ''
+" let g:ctrlp_cmd = ''
+" let g:ctrlp_match_window = 'bottom,order:btt,min:1,max:10,results:50'
+" " The Silver Searcher
+" if executable('ag')
+"   " Use ag over grep
+"   set grepprg=ag\ --nogroup\ --nocolor
+"
+"   " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
+"   let g:ctrlp_user_command = 'ag %s -i --nocolor --nogroup --hidden
+"       \ --ignore .git
+"       \ --ignore .svn
+"       \ --ignore .hg
+"       \ --ignore .DS_Store
+"       \ --ignore "**/*.pyc"
+"       \ -g ""'
+" endif
 
-  " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
-  let g:ctrlp_user_command = 'ag %s -i --nocolor --nogroup --hidden
-      \ --ignore .git
-      \ --ignore .svn
-      \ --ignore .hg
-      \ --ignore .DS_Store
-      \ --ignore "**/*.pyc"
-      \ -g ""'
-endif
+:nmap <C-p> :CommandT .<CR>
 
 " Convenient key mappings for everyday use
 :nmap <leader>al :%s/\s\+$//<CR>
