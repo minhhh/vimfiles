@@ -388,6 +388,7 @@ vnoremap <silent> <leader>a :EasyAlign<CR>
 let g:ctrlp_map = ''
 let g:ctrlp_cmd = ''
 let g:ctrlp_match_window = 'bottom,order:btt,min:1,max:10,results:50'
+let g:ctrlp_lazy_update = 250
 " The Silver Searcher
 if executable('ag')
   " Use ag over grep
