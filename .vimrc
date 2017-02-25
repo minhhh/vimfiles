@@ -339,7 +339,7 @@ nnoremap , "s
 :nmap <F2> :w<CR>
 :imap <F2> <Esc>:w<CR>a
 vnoremap <F3> :w !pbcopy<CR><CR><Esc>
-:nmap <F4> :q<CR>
+:nmap <F4> :q<CR>:q<CR>
 :imap <F4> <Esc>:q<CR>a
 vnoremap <C-r> "hy:%s/<C-r>h//gc<left><left><left>
 
