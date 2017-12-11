@@ -109,7 +109,9 @@ Plugin 'tpope/vim-sexp-mappings-for-regular-people'
 
 " Javascript
 Plugin 'jelera/vim-javascript-syntax'
+Plugin 'maksimr/vim-jsbeautify'
 
+" C Sharp
 Plugin 'OmniSharp/omnisharp-vim'
 Plugin 'tpope/vim-dispatch'
 
@@ -118,6 +120,7 @@ Plugin 'tpope/vim-dispatch'
 "Plugin 'tpope/vim-fugitive'
 "Plugin 'gregsexton/gitv'
 "Plugin 'mhinz/vim-signify'
+"
 
 call vundle#end()
 if has('autocmd')
@@ -419,10 +422,16 @@ vnoremap [[ [{
 vnoremap ]] ]}
 :vmap <leader>f !tidy -qicbn -asxhtml -config ~/.dotfiles/.tidyconfig<CR><CR>
 
+autocmd FileType javascript vnoremap <buffer>  <C-f> :call RangeJsBeautify()<cr>
+autocmd FileType json vnoremap <buffer> <C-f> :call RangeJsonBeautify()<cr>
+autocmd FileType jsx vnoremap <buffer> <C-f> :call RangeJsxBeautify()<cr>
+autocmd FileType html vnoremap <buffer> <C-f> :call RangeHtmlBeautify()<cr>
+autocmd FileType css vnoremap <buffer> <C-f> :call RangeCSSBeautify()<cr>
+
 " Map convenient mark with capital letter for it to work cross files
-let g:bookmark_highlight_lines = 1
-nnoremap ms :silent! BookmarkSave /tmp/.vim-bookmarks<CR>
-nnoremap ml :silent! BookmarkLoad /tmp/.vim-bookmarks<CR><CR>
+" let g:bookmark_highlight_lines = 1
+" nnoremap ms :silent! BookmarkSave /tmp/.vim-bookmarks<CR>
+" nnoremap ml :silent! BookmarkLoad /tmp/.vim-bookmarks<CR><CR>
 
 " Disable spelling and wrapline
 au BufNewFile,BufRead,BufEnter *.* set nospell
