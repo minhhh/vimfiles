@@ -422,7 +422,8 @@ vnoremap [[ [{
 vnoremap ]] ]}
 :vmap <leader>f !tidy -qicbn -asxhtml -config ~/.dotfiles/.tidyconfig<CR><CR>
 
-autocmd FileType javascript vnoremap <buffer>  <C-f> :call RangeJsBeautify()<cr>
+autocmd FileType javascript vnoremap <buffer>  <C-f> :call RangeJsBeautify()<CR>
+autocmd FileType javascript :nmap <C-f> gg V G :call RangeJsBeautify()<CR>
 autocmd FileType json vnoremap <buffer> <C-f> :call RangeJsonBeautify()<cr>
 autocmd FileType jsx vnoremap <buffer> <C-f> :call RangeJsxBeautify()<cr>
 autocmd FileType html vnoremap <buffer> <C-f> :call RangeHtmlBeautify()<cr>
