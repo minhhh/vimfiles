@@ -112,7 +112,7 @@ Plugin 'jelera/vim-javascript-syntax'
 Plugin 'maksimr/vim-jsbeautify'
 
 " C Sharp
-Plugin 'OmniSharp/omnisharp-vim'
+" Plugin 'OmniSharp/omnisharp-vim'
 Plugin 'tpope/vim-dispatch'
 
 " Source Control plugins
