@@ -375,6 +375,7 @@ let g:miniBufExplBRSplit = 0
 map <leader>q :Bclose!<CR>
 
 " Map syntastic
+let g:syntastic_python_checkers = ['pylint']
 :nmap <leader>b :SyntasticCheck<CR>:Errors<CR>
 :nmap <leader>c :silent! cclose<CR>:lclose<CR>
 
