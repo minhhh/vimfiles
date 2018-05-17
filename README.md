@@ -6,8 +6,8 @@ Vim files for OSX, Windows and Linux
 ## First time install for Mac OS X
 1. Clone this repository:
 
-        $ git clone git@bitbucket.org:minhhh/vimfiles.git ~/.vim
-        $ git submodule init
+        $ git clone git@github.com:minhhh/vimfiles.git ~/.vim
+        $ cd ~/.vim && git submodule init
         $ git submodule update --recursive
 
 2. Create symlinks to .vimrc and .gvimrc:
