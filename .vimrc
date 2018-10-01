@@ -416,7 +416,6 @@ nnoremap <C-k> 3k
 vnoremap <C-j> 3j
 vnoremap <C-k> 3k
 :nmap <leader>r :silent! edit<CR>
-:imap dw <C-w>
 nnoremap [[ [{
 nnoremap ]] ]}
 vnoremap [[ [{
