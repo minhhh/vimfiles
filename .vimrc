@@ -12,7 +12,8 @@ Plugin 'vim-airline/vim-airline-themes'
 Plugin 'vim-airline/vim-airline'
 Plugin 'scrooloose/nerdtree'
 Plugin 'terryma/vim-multiple-cursors'
-Plugin 'xolox/vim-session'
+" Plugin 'xolox/vim-session'
+Plugin 'tpope/vim-obsession'
 Plugin 'xolox/vim-misc'
 Plugin 'brailsmt/vim-plugin-minibufexpl'
 " Plugin 'zefei/vim-wintabs'
@@ -545,6 +546,8 @@ autocmd BufWinLeave * call clearmatches()
 :let NERDTreeShowHidden=1
 :let NERDTreeShowBookmarks=1
 :let g:NERDTreeChDirMode=2
+let g:nerdtree_tabs_open_on_gui_startup=0
+let g:nerdtree_tabs_open_on_new_tab=0
 autocmd vimenter * :silent! NERDTree
 
 " let g:bookmark_no_default_key_mappings = 1
