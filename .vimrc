@@ -274,9 +274,9 @@ set confirm         " Ask to save buffer instead of failing when executing
 " ----------------------------------------------------------------------------
 
 " See http://stackoverflow.com/questions/11404800/fix-vim-tmux-yank-paste-on-unnamed-register
-if $TMUX == ""
+" if $TMUX == ""
   set clipboard=unnamed " Yank to the system clipboard by default
-endif
+" endif
 
 " ----------------------------------------------------------------------------
 "  editing text     " TODO: look at these options
