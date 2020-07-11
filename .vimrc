@@ -22,10 +22,10 @@ Plugin 'junegunn/vim-easy-align'
 Plugin 'tpope/vim-surround'
 Plugin 'jiangmiao/auto-pairs'
 " Plugin 'Raimondi/delimitMate'
-Plugin 'MarcWeber/vim-addon-mw-utils'
-Plugin 'tomtom/tlib_vim'
-Plugin 'garbas/vim-snipmate'
-Plugin 'minhhh/vim-snippets'
+" Plugin 'MarcWeber/vim-addon-mw-utils'
+" Plugin 'tomtom/tlib_vim'
+" Plugin 'garbas/vim-snipmate'
+" Plugin 'minhhh/vim-snippets'
 
 " Various editing plugins
 " Plugin 'kana/vim-textobj-user'
@@ -53,7 +53,7 @@ Plugin 'eiginn/netrw'
 Plugin 'tomtom/tcomment_vim'
 
 " File managers/explorers
-Plugin 'kien/ctrlp.vim'
+Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'wincent/command-t'
 
 if executable('ack')
