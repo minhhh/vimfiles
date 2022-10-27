@@ -3,3 +3,4 @@ bundle
 .netrwhist
 undo/
 sessions/
+.VimballRecord

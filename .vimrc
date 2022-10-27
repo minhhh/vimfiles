@@ -89,19 +89,20 @@ endif
 " Plugin 'tpope/vim-markdown'
 " Plugin 'godlygeek/tabular'
 " Plugin 'plasticboy/vim-markdown'
+" Plugin 'preservim/vim-markdown'
 
 " PowerShell plugins
 " Plugin 'dougireton/vim-ps1'
 
 " Syntax check on buffer save
-Plugin 'scrooloose/syntastic'
+" Plugin 'scrooloose/syntastic'
 
 " Clojure
-Plugin 'tpope/vim-fireplace'
-Plugin 'tpope/vim-leiningen'
-Plugin 'guns/vim-clojure-static'
-Plugin 'guns/vim-sexp'
-Plugin 'tpope/vim-sexp-mappings-for-regular-people'
+" Plugin 'tpope/vim-fireplace'
+" Plugin 'tpope/vim-leiningen'
+" Plugin 'guns/vim-clojure-static'
+" Plugin 'guns/vim-sexp'
+" Plugin 'tpope/vim-sexp-mappings-for-regular-people'
 
 " Python
 " Plugin 'ivanov/vim-ipython'
@@ -194,7 +195,7 @@ set number            " show line numbers
 colorscheme Tomorrow
 
 if exists('+colorcolumn')
-  set colorcolumn=80    " display a line in column 80 to show you
+  set colorcolumn=110    " display a line in column 80 to show you
                         " where to line break.
 endif
 
@@ -602,6 +603,7 @@ source ~/.vim/.vimrc.abbr
 " Markdown
 " ----------------------------------------------------------------------------
 autocmd BufNewFile,BufReadPost *.md set filetype=markdown
+set mmp=1000000 " Sometimes we have error in markdown file https://github.com/gu-fan/riv.vim/issues/144
 
 " ----------------------------------------------------------------------------
 " Omnisharp
