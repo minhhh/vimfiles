@@ -338,6 +338,7 @@ set diffopt+=vertical       " diff mode with vertical splits please
 " ----------------------------------------------------------------------------
 :let mapleader = "-"
 
+nnoremap , "s
 nnoremap ; :
 vnoremap , "s
 nnoremap , "s
@@ -413,16 +414,26 @@ endif
 " Convenient key mappings for everyday use
 :nmap <leader>al :%s/\s\+$//<CR>
 :nmap <leader>ab :retab<CR>
-nnoremap <C-j> 3j
-nnoremap <C-k> 3k
-vnoremap <C-j> 3j
-vnoremap <C-k> 3k
+nnoremap <C-j> 2j
+nnoremap <C-k> 2k
+vnoremap <C-j> 2j
+vnoremap <C-k> 2k
 :nmap <leader>r :silent! edit<CR>
 nnoremap [[ [{
 nnoremap ]] ]}
 vnoremap [[ [{
 vnoremap ]] ]}
 :vmap <leader>f !tidy -qicbn -asxhtml -config ~/.dotfiles/.tidyconfig<CR><CR>
+
+" Convenient key to move lines and blocks up and down
+" nnoremap <C-j> :m .+1<CR>==
+" nnoremap <C-k> :m .-2<CR>==
+"
+" inoremap <C-j> <Esc>:m .+1<CR>==gi
+" inoremap <C-k> <Esc>:m .-2<CR>==gi
+"
+" vnoremap <C-j> :m '>+1<CR>gv=gv
+" vnoremap <C-k> :m '<-2<CR>gv=gv
 
 autocmd FileType javascript vnoremap <buffer>  <C-f> :call RangeJsBeautify()<CR>
 autocmd FileType javascript :nmap <C-f> gg V G :call RangeJsBeautify()<CR>
@@ -578,7 +589,7 @@ autocmd vimenter * :silent! NERDTree
 " ----------------------------------------------------------------------------
 :let g:session_autosave=0
 :let g:session_autoload='no'
-:let g:session_default_to_last='yes'
+:let g:session_default_to_last='no'
 :let g:session_verbose_messages=0
 
 " ----------------------------------------------------------------------------

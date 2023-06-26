@@ -86,6 +86,13 @@ Remove lines that don't match a pattern
 
     :g!/www\.example\.com/d
 
+In visual mode
+
+    I - Insert before
+    A - Insert after
+    r - Replace with another character
+    P - Replace with the current text in the register
+
 ## Undo/Redo changes
 
     .   - Repeat the last command that modified the file.
