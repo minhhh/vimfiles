@@ -329,8 +329,12 @@ au FileType javascript call JavaScriptFold()
 " ----------------------------------------------------------------------------
 "  diff mode
 " ----------------------------------------------------------------------------
-set diffopt+=vertical       " start diff mode with vertical splits by default
-set diffopt+=vertical       " diff mode with vertical splits please
+if &diff
+  set diffopt-=internal
+  set diffopt+=vertical
+endif
+
+
 
 " ----------------------------------------------------------------------------
 " Some useful key mappings.
