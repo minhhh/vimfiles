@@ -43,7 +43,7 @@ Plugin 'vim-scripts/closetag.vim'
 Plugin 'vim-scripts/taglist.vim'
 " Plugin 'MattesGroeger/vim-bookmarks'
 Plugin 'MarcWeber/vim-addon-local-vimrc'
-Plugin 'jpalardy/vim-slime'
+" Plugin 'jpalardy/vim-slime'
 Plugin 'eiginn/netrw'
 " Plugin 'vim-scripts/DrawIt'
 
@@ -358,8 +358,8 @@ vnoremap <C-r> "hy:%s/<C-r>h//gc<left><left><left>
 :nmap <leader>u :b#<CR>
 :nmap <leader>h :MBEOpen<CR>:MBEFocus<CR>h
 :nmap <leader>l :MBEOpen<CR>:MBEFocus<CR>l
-:nmap <C-H> :MBEOpen<CR>:MBEFocus<CR>h<CR>
-:nmap <C-L> :MBEOpen<CR>:MBEFocus<CR>l<CR>
+:nmap <leader>j :MBEOpen<CR>:MBEFocus<CR>h<CR>
+:nmap <leader>k :MBEOpen<CR>:MBEFocus<CR>l<CR>
 :nmap <leader>q :MBEbd!<CR>
 
 " Switch to previous buffer
@@ -379,7 +379,7 @@ let g:miniBufExplBRSplit = 0
 " nmap <leader>7 :WintabsGo 7<CR>
 " nmap <leader>8 :WintabsGo 8<CR>
 " nmap <leader>9 :WintabsGo 9<CR>
-map <leader>q :Bclose!<CR>
+" map <leader>q :Bclose!<CR>
 
 " Map syntastic
 let g:syntastic_python_checkers = ['pylint']
@@ -427,7 +427,8 @@ nnoremap [[ [{
 nnoremap ]] ]}
 vnoremap [[ [{
 vnoremap ]] ]}
-:vmap <leader>f !tidy -qicbn -asxhtml -config ~/.dotfiles/.tidyconfig<CR><CR>
+" :vmap <leader>f !tidy -qicbn -asxhtml -config ~/.dotfiles/.tidyconfig<CR><CR>
+vnoremap <leader>f !astyle <CR>
 
 " Convenient key to move lines and blocks up and down
 " nnoremap <C-j> :m .+1<CR>==
