@@ -1,7 +1,7 @@
 Vimfiles
 ========
 
-Vim files for OSX, Windows and Linux
+**Vim** files for OSX, Windows and Linux
 
 ## First time install for Mac OS X
 1. Clone this repository:

@@ -53,8 +53,8 @@ Plugin 'eiginn/netrw'
 Plugin 'tomtom/tcomment_vim'
 
 " File managers/explorers
-Plugin 'ctrlpvim/ctrlp.vim'
-Plugin 'wincent/command-t'
+" Plugin 'ctrlpvim/ctrlp.vim'
+" Plugin 'wincent/command-t'
 
 if executable('ack')
   Plugin 'mileszs/ack.vim'
@@ -192,7 +192,8 @@ set number            " show line numbers
 " ----------------------------------------------------------------------------
 "  syntax, highlighting and spelling
 " ----------------------------------------------------------------------------
-colorscheme Tomorrow
+" colorscheme Tomorrow
+colorscheme PaperColor
 
 if exists('+colorcolumn')
   set colorcolumn=110    " display a line in column 80 to show you
