@@ -80,7 +80,7 @@ fun! s:register_default_theme()
         \       'matchparen_bg' : ['#c6c6c6', '251'],
         \       'matchparen_fg' : ['#005f87', '24'],
         \       'visual_fg' : ['#eeeeee', '237'],
-        \       'visual_bg' : ['#0087af', '225'],
+        \       'visual_bg' : ['#0087af', '219'],
         \       'folded_fg' : ['#0087af', '31'],
         \       'folded_bg' : ['#afd7ff', '153'],
         \       'wildmenu_fg': ['#444444', '238'],
