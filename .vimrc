@@ -53,8 +53,9 @@ Plugin 'eiginn/netrw'
 Plugin 'tomtom/tcomment_vim'
 
 " File managers/explorers
-" Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'ctrlpvim/ctrlp.vim'
 " Plugin 'wincent/command-t'
+" Plugin 'junegunn/fzf'
 
 if executable('ack')
   Plugin 'mileszs/ack.vim'
@@ -63,6 +64,7 @@ endif
 if executable('ag')
   Plugin 'rking/ag.vim'
 endif
+Plugin 'jremmen/vim-ripgrep'
 
 " Plugin 'mhinz/vim-startify'
 " Plugin 'chrisbra/Recover.vim'
@@ -396,25 +398,37 @@ let g:syntastic_python_checkers = ['pylint']
 vnoremap <silent> <leader>a :EasyAlign<CR>
 
 " CommandP
-:nmap <C-p> :CtrlP system("pwd")<CR>
-let g:ctrlp_map = ''
-let g:ctrlp_cmd = ''
+" :nmap <C-p> :CtrlP system("pwd")<CR>
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlP'
 let g:ctrlp_match_window = 'bottom,order:btt,min:1,max:10,results:50'
-let g:ctrlp_lazy_update = 250
+let g:ctrlp_lazy_update = 100
+let g:ctrlp_working_path_mode = 'c'
+let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
+let g:ctrlp_custom_ignore = {
+  \ 'dir':  '\v[\/]\.(git|hg|svn)$',
+  \ 'file': '\v\.(exe|so|dll)$',
+  \ 'link': 'some_bad_symbolic_links',
+  \ }
+
+" let g:ctrlp_user_command = 'find %s -type f'
 " The Silver Searcher
 if executable('ag')
   " Use ag over grep
   set grepprg=ag\ --nogroup\ --nocolor
 
   " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
-  let g:ctrlp_user_command = 'ag %s -i --nocolor --nogroup --hidden
-      \ --ignore .git
-      \ --ignore .svn
-      \ --ignore .hg
-      \ --ignore .DS_Store
-      \ --ignore "**/*.pyc"
-      \ -g ""'
+  " let g:ctrlp_user_command = 'ag %s -i --nocolor --nogroup --hidden
+  "     \ --ignore .git
+  "     \ --ignore .svn
+  "     \ --ignore .hg
+  "     \ --ignore .DS_Store
+  "     \ --ignore "**/*.pyc"
+  "     \ -g ""'
 endif
+
+" Use
+let g:ctrlp_user_command = 'rg --files --no-ignore'
 
 " Convenient key mappings for everyday use
 :nmap <leader>al :%s/\s\+$//<CR>
@@ -567,6 +581,7 @@ autocmd BufWinLeave * call clearmatches()
 let g:nerdtree_tabs_open_on_gui_startup=0
 let g:nerdtree_tabs_open_on_new_tab=0
 autocmd vimenter * :silent! NERDTree
+autocmd VimEnter * wincmd p
 
 " let g:bookmark_no_default_key_mappings = 1
 " function! BookmarkMapKeys()
