@@ -363,7 +363,7 @@ vnoremap <C-r> "hy:%s/<C-r>h//gc<left><left><left>
 " Map buffer navigation
 :nmap <leader>n :enew<CR>
 :nmap <leader>u :b#<CR>
-:nmap <leader>h :Buffers<CR>
+:nmap <leader>0 :Buffers<CR>
 :nmap <leader>j :bprev<CR>
 :nmap <leader>k :bnext<CR>
 " :nmap <leader>h :MBEOpen<CR>:MBEFocus<CR>h
@@ -371,16 +371,16 @@ vnoremap <C-r> "hy:%s/<C-r>h//gc<left><left><left>
 " :nmap <leader>j :MBEOpen<CR>:MBEFocus<CR>h<CR>
 " :nmap <leader>k :MBEOpen<CR>:MBEFocus<CR>l<CR>
 " :nmap <leader>q :MBEbd!<CR>
-:nmap <leader>q :bd<CR> :b#<CR> :silent! NERDTree<CR> :silent! wincmd p<CR>
+:nmap <leader>q :bd<CR> :bprev<CR> :silent! NERDTree<CR> :silent! wincmd p<CR>
 
 nnoremap <C-p> :Files<CR>
 vnoremap <C-p> :Files<CR>
 
 " Switch to previous buffer
-:imap <leader>h <Esc>:MBEOpen<CR>:MBEFocus<CR>h
-:imap <leader>l <Esc>:MBEOpen<CR>:MBEFocus<CR>l
-:imap <leader>q <Esc>:MBEbd!<CR>
-let g:miniBufExplBRSplit = 0
+" :imap <leader>h <Esc>:MBEOpen<CR>:MBEFocus<CR>h
+" :imap <leader>l <Esc>:MBEOpen<CR>:MBEFocus<CR>l
+" :imap <leader>q <Esc>:MBEbd!<CR>
+" let g:miniBufExplBRSplit = 0
 
 " map <C-H> <Plug>(wintabs_previous)
 " map <C-L> <Plug>(wintabs_next)
