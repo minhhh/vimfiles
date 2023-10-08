@@ -15,7 +15,8 @@ Plugin 'terryma/vim-multiple-cursors'
 " Plugin 'xolox/vim-session'
 Plugin 'tpope/vim-obsession'
 Plugin 'xolox/vim-misc'
-Plugin 'brailsmt/vim-plugin-minibufexpl'
+" Plugin 'brailsmt/vim-plugin-minibufexpl'
+" Plugin 'jlanzarotta/bufexplorer'
 " Plugin 'zefei/vim-wintabs'
 " Plugin 'Shougo/neocomplcache.vim'
 Plugin 'junegunn/vim-easy-align'
@@ -53,9 +54,10 @@ Plugin 'eiginn/netrw'
 Plugin 'tomtom/tcomment_vim'
 
 " File managers/explorers
-Plugin 'ctrlpvim/ctrlp.vim'
+" Plugin 'ctrlpvim/ctrlp.vim'
 " Plugin 'wincent/command-t'
-" Plugin 'junegunn/fzf'
+Plugin 'junegunn/fzf'
+Plugin 'junegunn/fzf.vim'
 
 if executable('ack')
   Plugin 'mileszs/ack.vim'
@@ -228,9 +230,11 @@ function! LightLineFilename()
   return expand('%')
 endfunction
 
-let g:airline_extensions = []
+" let g:airline_extensions = []
+" let g:airline_statusline_ontop=0
 " let g:airline#extensions#tagbar#enabled = 0
-" let g:airline#extensions#tabline#enabled = 0
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#formatter = 'default'
 let g:airline_theme='tomorrow'
 
 set helpheight=30         " Set window height when opening Vim help windows
@@ -359,11 +363,18 @@ vnoremap <C-r> "hy:%s/<C-r>h//gc<left><left><left>
 " Map buffer navigation
 :nmap <leader>n :enew<CR>
 :nmap <leader>u :b#<CR>
-:nmap <leader>h :MBEOpen<CR>:MBEFocus<CR>h
-:nmap <leader>l :MBEOpen<CR>:MBEFocus<CR>l
-:nmap <leader>j :MBEOpen<CR>:MBEFocus<CR>h<CR>
-:nmap <leader>k :MBEOpen<CR>:MBEFocus<CR>l<CR>
-:nmap <leader>q :MBEbd!<CR>
+:nmap <leader>h :Buffers<CR>
+:nmap <leader>j :bprev<CR>
+:nmap <leader>k :bnext<CR>
+" :nmap <leader>h :MBEOpen<CR>:MBEFocus<CR>h
+" :nmap <leader>l :MBEOpen<CR>:MBEFocus<CR>l
+" :nmap <leader>j :MBEOpen<CR>:MBEFocus<CR>h<CR>
+" :nmap <leader>k :MBEOpen<CR>:MBEFocus<CR>l<CR>
+" :nmap <leader>q :MBEbd!<CR>
+:nmap <leader>q :bd<CR> :b#<CR> :silent! NERDTree<CR> :silent! wincmd p<CR>
+
+nnoremap <C-p> :Files<CR>
+vnoremap <C-p> :Files<CR>
 
 " Switch to previous buffer
 :imap <leader>h <Esc>:MBEOpen<CR>:MBEFocus<CR>h
@@ -428,7 +439,7 @@ if executable('ag')
 endif
 
 " Use
-let g:ctrlp_user_command = 'rg --files --no-ignore'
+let g:ctrlp_user_command = 'rg --files --no-ignore --hidden -g \!**/node_modules/* -g \!**/.git/*'
 
 " Convenient key mappings for everyday use
 :nmap <leader>al :%s/\s\+$//<CR>
