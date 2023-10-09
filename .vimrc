@@ -230,12 +230,13 @@ function! LightLineFilename()
   return expand('%')
 endfunction
 
-" let g:airline_extensions = []
+let g:airline_extensions = ['tabline']
 " let g:airline_statusline_ontop=0
 " let g:airline#extensions#tagbar#enabled = 0
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#formatter = 'default'
-let g:airline_theme='tomorrow'
+" let g:airline_theme='tomorrow'
+let g:airline_theme='molokai'
 
 set helpheight=30         " Set window height when opening Vim help windows
 
@@ -375,6 +376,7 @@ vnoremap <C-r> "hy:%s/<C-r>h//gc<left><left><left>
 
 nnoremap <C-p> :Files<CR>
 vnoremap <C-p> :Files<CR>
+:nmap <leader>f :RG!<CR>
 
 " Switch to previous buffer
 " :imap <leader>h <Esc>:MBEOpen<CR>:MBEFocus<CR>h
