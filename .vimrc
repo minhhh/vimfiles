@@ -372,7 +372,7 @@ vnoremap <C-r> "hy:%s/<C-r>h//gc<left><left><left>
 " :nmap <leader>j :MBEOpen<CR>:MBEFocus<CR>h<CR>
 " :nmap <leader>k :MBEOpen<CR>:MBEFocus<CR>l<CR>
 " :nmap <leader>q :MBEbd!<CR>
-:nmap <leader>q :bd<CR> :bprev<CR> :silent! NERDTree<CR> :silent! wincmd p<CR>
+:nmap <leader>q :b#\|bd #<CR>
 
 nnoremap <C-p> :Files<CR>
 vnoremap <C-p> :Files<CR>
