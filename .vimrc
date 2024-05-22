@@ -128,6 +128,8 @@ Plugin 'tpope/vim-dispatch'
 "Plugin 'mhinz/vim-signify'
 "
 
+" Autocomplete
+
 call vundle#end()
 if has('autocmd')
   filetype plugin indent on   " Turn on Filetype detection, plugins, and
@@ -372,7 +374,7 @@ vnoremap <C-r> "hy:%s/<C-r>h//gc<left><left><left>
 " :nmap <leader>j :MBEOpen<CR>:MBEFocus<CR>h<CR>
 " :nmap <leader>k :MBEOpen<CR>:MBEFocus<CR>l<CR>
 " :nmap <leader>q :MBEbd!<CR>
-:nmap <leader>q :b#\|bd #<CR>
+:nmap <leader>q :bp\|bd #<CR>
 
 nnoremap <C-p> :Files<CR>
 vnoremap <C-p> :Files<CR>
@@ -653,12 +655,40 @@ set mmp=1000000 " Sometimes we have error in markdown file https://github.com/gu
 " ----------------------------------------------------------------------------
 " Omnisharp
 " ----------------------------------------------------------------------------
-" OmniSharp won't work without this setting
-" filetype plugin on
-"
-" "This is the default value, setting it isn't actually necessary
-" let g:OmniSharp_host = "http://localhost:2000"
-"
+augroup OmniSharpIntegrations
+  autocmd!
+  autocmd User OmniSharpProjectUpdated,OmniSharpReady call lightline#update()
+augroup END
+
+let g:OmniSharp_server_use_net6 = 1
+
+let g:OmniSharp_popup_position = 'peek'
+if has('nvim')
+  let g:OmniSharp_popup_options = {
+  \ 'winblend': 30,
+  \ 'winhl': 'Normal:Normal,FloatBorder:ModeMsg',
+  \ 'border': 'rounded'
+  \}
+else
+  let g:OmniSharp_popup_options = {
+  \ 'highlight': 'Normal',
+  \ 'padding': [0],
+  \ 'border': [1],
+  \ 'borderchars': ['─', '│', '─', '│', '╭', '╮', '╯', '╰'],
+  \ 'borderhighlight': ['ModeMsg']
+  \}
+endif
+let g:OmniSharp_popup_mappings = {
+\ 'sigNext': '<C-n>',
+\ 'sigPrev': '<C-p>',
+\ 'pageDown': ['<C-f>', '<PageDown>'],
+\ 'pageUp': ['<C-b>', '<PageUp>']
+\}
+
+let g:OmniSharp_highlight_groups = {
+\ 'ExcludedCode': 'NonText'
+\}
+
 " "Set the type lookup function to use the preview window instead of the status line
 " "let g:OmniSharp_typeLookupInPreview = 1
 "
@@ -692,8 +722,8 @@ set mmp=1000000 " Sometimes we have error in markdown file https://github.com/gu
 " let g:syntastic_cs_checkers = ['syntax', 'semantic', 'issues']
 " " If you are using the omnisharp-roslyn backend, use the following
 " " let g:syntastic_cs_checkers = ['code_checker']
-" augroup omnisharp_commands
-"     autocmd!
+augroup omnisharp_commands
+    autocmd!
 "
 "     "Set autocomplete function to OmniSharp (if not using YouCompleteMe completion plugin)
 "     autocmd FileType cs setlocal omnifunc=OmniSharp#Complete
@@ -713,24 +743,25 @@ set mmp=1000000 " Sometimes we have error in markdown file https://github.com/gu
 "
 "     "The following commands are contextual, based on the current cursor position.
 "
-"     autocmd FileType cs nnoremap <leader>og :OmniSharpGotoDefinition<cr>
-"     autocmd FileType cs nnoremap <leader>of :OmniSharpFindUsages<cr>
-"     " autocmd FileType cs nnoremap <leader>ofi :OmniSharpFindImplementations<cr>
-"     " autocmd FileType cs nnoremap <leader>oft :OmniSharpFindType<cr>
-"     " autocmd FileType cs nnoremap <leader>ofs :OmniSharpFindSymbol<cr>
-"     "finds members in the current buffer
-"     " autocmd FileType cs nnoremap <leader>fm :OmniSharpFindMembers<cr>
+    autocmd FileType cs nnoremap <leader>og :OmniSharpGotoDefinition<cr>
+    autocmd FileType cs nnoremap <leader>of :OmniSharpFindUsages<cr>
+    autocmd FileType cs nnoremap <leader>ofi :OmniSharpFindImplementations<cr>
+    autocmd FileType cs nnoremap <leader>oft :OmniSharpFindType<cr>
+    autocmd FileType cs nnoremap <leader>ofs :OmniSharpFindSymbol<cr>
+
+    "finds members in the current buffer
+    autocmd FileType cs nnoremap <leader>fm :OmniSharpFindMembers<cr>
 "     " cursor can be anywhere on the line containing an issue
 "     autocmd FileType cs nnoremap <leader>ox  :OmniSharpFixIssue<cr>
 "     autocmd FileType cs nnoremap <leader>ou :OmniSharpFixUsings<cr>
-"     " autocmd FileType cs nnoremap <leader>tt :OmniSharpTypeLookup<cr>
+    autocmd FileType cs nnoremap <leader>tt :OmniSharpTypeLookup<cr>
 "     autocmd FileType cs nnoremap <leader>od :OmniSharpDocumentation<cr>
 "     "navigate up by method/property/field
 "     " autocmd FileType cs nnoremap <C-K> :OmniSharpNavigateUp<cr>
 "     "navigate down by method/property/field
 "     " autocmd FileType cs nnoremap <C-J> :OmniSharpNavigateDown<cr>
 "
-" augroup END
+augroup END
 
 
 " this setting controls how long to wait (in ms) before fetching type / symbol information.
